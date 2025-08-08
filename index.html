@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTDUex - 安全可信的數位資產交易平台</title>
-    <meta name="description" content="BTDUex是一個安全可信的數位貨幣交易平台，提供比特幣、以太坊等主流加密貨幣的即時交易服務。">
+    <title>BTDUex - Secure and Trusted Digital Asset Trading Platform</title>
+    <meta name="description" content="BTDUex is a secure and trusted digital currency trading platform, providing real-time trading services for Bitcoin, Ethereum and other mainstream cryptocurrencies.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1202,7 +1202,7 @@
                     <!-- Language Toggle -->
                     <div class="language-toggle">
                         <button class="language-btn" id="language-toggle">
-                            <span id="current-lang">中文</span>
+                            <span id="current-lang">English</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="language-dropdown" id="language-dropdown">
@@ -1565,7 +1565,7 @@
         };
 
         // Current language
-        let currentLang = localStorage.getItem('language') || 'zh-TW';
+        let currentLang = localStorage.getItem('language') || 'en';
 
         // Market data cache
         let marketData = {};
@@ -1645,7 +1645,7 @@
                 }
             });
             
-            document.getElementById('current-lang').textContent = lang === 'zh-TW' ? '中文' : 'English';
+            document.getElementById('current-lang').textContent = lang === 'en' ? 'English' : '中文';
             document.documentElement.lang = lang;
         }
 
