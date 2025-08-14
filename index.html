@@ -3,103 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTDUex - Secure and Trusted Digital Asset Trading Platform</title>
-    <meta name="description" content="BTDUex is a secure and trusted digital currency trading platform, providing real-time trading services for Bitcoin, Ethereum and other mainstream cryptocurrencies.">
-    
+    <title>BTDUex - Professional Digital Asset Trading Platform</title>
+    <meta name="description" content="BTDUex is a professional digital asset trading platform providing institutional-grade trading services for Bitcoin, Ethereum and other cryptocurrencies.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-
-    
     <style>
-        /* ===== CSS VARIABLES ===== */
+        /* ===== PROFESSIONAL TRADING PLATFORM VARIABLES ===== */
         :root {
-            /* Colors */
-            --primary-color: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary-color: #8b5cf6;
-            --accent-color: #06b6d4;
-            --success-color: #10b981;
-            --danger-color: #ef4444;
-            --warning-color: #f59e0b;
-            
-            /* Gradients */
-            --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-            --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            
-            /* Light Theme Colors */
-            --bg-color: #ffffff;
-            --bg-secondary: #f8fafc;
-            --text-color: #1e293b;
-            --text-secondary: #64748b;
-            --border-color: #e2e8f0;
-            --card-bg: #ffffff;
-            --header-bg: rgba(255, 255, 255, 0.95);
-            
-            /* Typography */
-            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-size-xs: 0.75rem;
-            --font-size-sm: 0.875rem;
-            --font-size-base: 1rem;
-            --font-size-lg: 1.125rem;
-            --font-size-xl: 1.25rem;
-            --font-size-2xl: 1.5rem;
-            --font-size-3xl: 1.875rem;
-            --font-size-4xl: 2.25rem;
-            
+            /* Professional Color Palette */
+            --primary-brand: #f0b90b;
+            --primary-brand-dark: #d9a441;
+            --primary-blue: #1e40af;
+            --primary-blue-light: #3b82f6;
+
+            /* Trading Colors */
+            --bull-green: #00d4aa;
+            --bull-green-bg: rgba(0, 212, 170, 0.1);
+            --bear-red: #f84960;
+            --bear-red-bg: rgba(248, 73, 96, 0.1);
+            --neutral-gray: #848e9c;
+
+            /* Dark Theme (Primary) */
+            --bg-primary: #0b0e11;
+            --bg-secondary: #161a1e;
+            --bg-tertiary: #1e2329;
+            --bg-quaternary: #2b3139;
+            --bg-hover: #2b3139;
+            --bg-active: #3c434b;
+
+            /* Text Colors */
+            --text-primary: #f0f0f0;
+            --text-secondary: #b7bdc6;
+            --text-tertiary: #848e9c;
+            --text-quaternary: #5e6673;
+
+            /* Border Colors */
+            --border-primary: #2b3139;
+            --border-secondary: #3c434b;
+            --border-tertiary: #474d57;
+
+            /* Professional Typography */
+            --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', monospace;
+
+            /* Font Sizes */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+
             /* Spacing */
-            --spacing-xs: 0.25rem;
-            --spacing-sm: 0.5rem;
-            --spacing-md: 1rem;
-            --spacing-lg: 1.5rem;
-            --spacing-xl: 2rem;
-            --spacing-2xl: 3rem;
-            --spacing-3xl: 4rem;
-            
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+
             /* Border Radius */
-            --radius-sm: 0.375rem;
-            --radius-md: 0.5rem;
-            --radius-lg: 0.75rem;
-            --radius-xl: 1rem;
-            
+            --radius-sm: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+
             /* Shadows */
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+
             /* Transitions */
             --transition-fast: 0.15s ease-in-out;
-            --transition-normal: 0.3s ease-in-out;
-            --transition-slow: 0.5s ease-in-out;
-            
+            --transition-normal: 0.2s ease-in-out;
+            --transition-slow: 0.3s ease-in-out;
+
             /* Z-index */
             --z-dropdown: 1000;
             --z-sticky: 1020;
             --z-fixed: 1030;
             --z-modal: 1040;
-            --z-popover: 1050;
-            --z-tooltip: 1060;
+            --z-tooltip: 1050;
         }
 
-        /* Dark Theme */
-        [data-theme="dark"] {
-            --bg-color: #0f172a;
-            --bg-secondary: #1e293b;
-            --text-color: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --border-color: #334155;
-            --card-bg: #1e293b;
-            --header-bg: rgba(15, 23, 42, 0.95);
+        /* Light Theme Override */
+        [data-theme="light"] {
+            --bg-primary: #ffffff;
+            --bg-secondary: #fafafa;
+            --bg-tertiary: #f5f5f5;
+            --bg-quaternary: #eeeeee;
+            --bg-hover: #f5f5f5;
+            --bg-active: #eeeeee;
+
+            --text-primary: #181a20;
+            --text-secondary: #474d57;
+            --text-tertiary: #848e9c;
+            --text-quaternary: #b7bdc6;
+
+            --border-primary: #eeeeee;
+            --border-secondary: #e6e8ea;
+            --border-tertiary: #d1d5db;
         }
 
-        /* ===== RESET & BASE STYLES ===== */
+        /* ===== PROFESSIONAL RESET & BASE STYLES ===== */
         * {
             margin: 0;
             padding: 0;
@@ -112,12 +132,13 @@
         }
 
         body {
-            font-family: var(--font-family);
-            font-size: var(--font-size-base);
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            font-family: var(--font-primary);
+            font-size: var(--text-base);
+            line-height: 1.5;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
             transition: background-color var(--transition-normal), color var(--transition-normal);
+            overflow-x: hidden;
         }
 
         img {
@@ -129,7 +150,7 @@
         a {
             text-decoration: none;
             color: inherit;
-            transition: color var(--transition-fast);
+            transition: all var(--transition-fast);
         }
 
         button {
@@ -140,593 +161,256 @@
             transition: all var(--transition-fast);
         }
 
-        ul {
+        ul, ol {
             list-style: none;
         }
 
-        /* ===== UTILITY CLASSES ===== */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* ===== PROFESSIONAL LAYOUT SYSTEM ===== */
         .container {
-            max-width: 1200px;
+            max-width: 1440px;
             margin: 0 auto;
-            padding: 0 var(--spacing-md);
+            padding: 0 var(--space-6);
         }
 
-        .section__title {
-            font-size: var(--font-size-3xl);
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: var(--spacing-2xl);
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .container-fluid {
+            width: 100%;
+            padding: 0 var(--space-4);
         }
 
-        /* ===== BUTTONS ===== */
+        /* Grid System */
+        .grid {
+            display: grid;
+            gap: var(--space-6);
+        }
+
+        .grid-cols-1 { grid-template-columns: 1fr; }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        .grid-cols-12 { grid-template-columns: repeat(12, 1fr); }
+
+        /* Flex System */
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: flex-end; }
+        .gap-2 { gap: var(--space-2); }
+        .gap-4 { gap: var(--space-4); }
+        .gap-6 { gap: var(--space-6); }
+
+        /* ===== PROFESSIONAL COMPONENTS ===== */
+        .card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            transition: all var(--transition-normal);
+        }
+
+        .card:hover {
+            border-color: var(--border-secondary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-header {
+            padding-bottom: var(--space-4);
+            border-bottom: 1px solid var(--border-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .card-title {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Professional Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: var(--spacing-md) var(--spacing-xl);
-            font-size: var(--font-size-base);
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            font-size: var(--text-sm);
             font-weight: 500;
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius-md);
             transition: all var(--transition-fast);
             cursor: pointer;
             text-decoration: none;
-            border: 2px solid transparent;
+            border: 1px solid transparent;
+            white-space: nowrap;
         }
 
-        .btn--primary {
-            background: var(--gradient-primary);
-            color: white;
-            box-shadow: var(--shadow-md);
+        .btn-primary {
+            background: var(--primary-brand);
+            color: var(--bg-primary);
+            border-color: var(--primary-brand);
         }
 
-        .btn--primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+        .btn-primary:hover {
+            background: var(--primary-brand-dark);
+            border-color: var(--primary-brand-dark);
         }
 
-        .btn--secondary {
+        .btn-secondary {
             background: transparent;
-            color: var(--primary-color);
-            border-color: var(--primary-color);
+            color: var(--text-primary);
+            border-color: var(--border-secondary);
         }
 
-        .btn--secondary:hover {
-            background: var(--primary-color);
-            color: white;
+        .btn-secondary:hover {
+            background: var(--bg-hover);
+            border-color: var(--border-tertiary);
         }
 
-        /* ===== HEADER ===== */
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-brand);
+            border-color: var(--primary-brand);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-brand);
+            color: var(--bg-primary);
+        }
+
+        .btn-sm {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--text-xs);
+        }
+
+        .btn-lg {
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--text-base);
+        }
+
+        /* ===== PROFESSIONAL HEADER & NAVIGATION ===== */
         .header {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            background: var(--header-bg);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
+            right: 0;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-primary);
             z-index: var(--z-fixed);
-            transition: all var(--transition-normal);
+            backdrop-filter: blur(10px);
         }
 
-        .nav {
+        .navbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 70px;
+            height: 64px;
+            padding: 0 var(--space-6);
         }
 
-        .nav__logo-text {
-            font-size: var(--font-size-xl);
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            font-size: var(--text-xl);
             font-weight: 700;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary-brand);
         }
 
-        .nav__menu {
+        .navbar-brand i {
+            font-size: var(--text-2xl);
+        }
+
+        .navbar-nav {
             display: flex;
             align-items: center;
-            gap: var(--spacing-xl);
+            gap: var(--space-8);
         }
 
-        .nav__list {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-lg);
-        }
-
-        .nav__link {
-            font-weight: 500;
+        .nav-link {
             color: var(--text-secondary);
-            transition: color var(--transition-fast);
-            position: relative;
-        }
-
-        .nav__link:hover {
-            color: var(--primary-color);
-        }
-
-        .nav__link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-primary);
-            transition: width var(--transition-fast);
-        }
-
-        .nav__link:hover::after {
-            width: 100%;
-        }
-
-        .nav__controls {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-        }
-
-        /* Language Toggle */
-        .language-toggle {
-            position: relative;
-        }
-
-        .language-btn {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-            padding: var(--spacing-sm) var(--spacing-md);
-            background: var(--bg-secondary);
+            font-weight: 500;
+            padding: var(--space-2) var(--space-4);
             border-radius: var(--radius-md);
-            color: var(--text-color);
-            font-size: var(--font-size-sm);
-        }
-
-        .language-dropdown {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-lg);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
             transition: all var(--transition-fast);
-            z-index: var(--z-dropdown);
-            min-width: 120px;
         }
 
-        .language-toggle:hover .language-dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--text-primary);
+            background: var(--bg-hover);
         }
 
-        .language-option {
-            display: block;
-            padding: var(--spacing-sm) var(--spacing-md);
-            color: var(--text-color);
-            transition: background-color var(--transition-fast);
-        }
-
-        .language-option:hover {
-            background: var(--bg-secondary);
-        }
-
-        /* Theme Toggle */
-        .theme-toggle {
-            padding: var(--spacing-sm);
-            background: var(--bg-secondary);
-            border-radius: var(--radius-md);
-            color: var(--text-color);
-            font-size: var(--font-size-lg);
-        }
-
-        .theme-toggle:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        /* Mobile Menu Toggle */
-        .nav__toggle {
-            display: none;
-            font-size: var(--font-size-lg);
-            color: var(--text-color);
-            cursor: pointer;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            padding: calc(70px + var(--spacing-3xl)) 0 var(--spacing-3xl);
-            min-height: 100vh;
+        .navbar-controls {
             display: flex;
             align-items: center;
-            position: relative;
-            overflow: hidden;
+            gap: var(--space-4);
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
-            z-index: 1;
-        }
-
-        .hero__container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-3xl);
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero__content {
-            position: relative;
-            z-index: 3;
-        }
-
-        .hero__title {
-            font-size: var(--font-size-4xl);
-            font-weight: 700;
-            color: white;
-            margin-bottom: var(--spacing-lg);
-            line-height: 1.2;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero__description {
-            font-size: var(--font-size-lg);
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: var(--spacing-xl);
-            line-height: 1.6;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-
-        .hero__actions {
-            display: flex;
-            gap: var(--spacing-md);
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-
-        .hero__stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-xl);
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .hero__stat {
-            text-align: center;
-            padding: var(--spacing-md);
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-lg);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .hero__stat-number {
-            font-size: var(--font-size-2xl);
-            font-weight: 700;
-            color: #00d4ff;
-            display: block;
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .hero__stat-label {
-            font-size: var(--font-size-sm);
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .hero__3d-container {
-            position: relative;
-            height: 500px;
-            perspective: 1000px;
-            transform-style: preserve-3d;
-            overflow: hidden;
-        }
-
-        .hero__3d-container::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 200px;
-            height: 60px;
-            background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
-            border-radius: 50%;
-            animation: brandGlow 4s ease-in-out infinite;
-            z-index: 0;
-        }
-
-        @keyframes brandGlow {
-            0%, 100% {
-                opacity: 0.3;
-                transform: translate(-50%, -50%) scale(1);
-            }
-            50% {
-                opacity: 0.8;
-                transform: translate(-50%, -50%) scale(1.2);
-            }
-        }
-
-        .hero__floating-elements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        .floating-coin {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
+        /* Language & Theme Controls */
+        .control-group {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #333;
-            box-shadow:
-                0 0 20px rgba(255, 215, 0, 0.5),
-                inset 0 2px 4px rgba(255, 255, 255, 0.3),
-                inset 0 -2px 4px rgba(0, 0, 0, 0.2);
-            animation: floatCoin 6s ease-in-out infinite;
-            transform-style: preserve-3d;
+            gap: var(--space-2);
         }
 
-        .floating-coin.eth {
-            background: linear-gradient(45deg, #627eea, #8fa2f0);
-            animation-delay: -2s;
-        }
-
-        .floating-coin.bnb {
-            background: linear-gradient(45deg, #f3ba2f, #f8d12f);
-            animation-delay: -4s;
-        }
-
-        .floating-coin.sol {
-            background: linear-gradient(45deg, #9945ff, #14f195);
-            animation-delay: -1s;
-        }
-
-        .floating-coin.ada {
-            background: linear-gradient(45deg, #0033ad, #1e88e5);
-            animation-delay: -3s;
-        }
-
-        .floating-geometry {
-            position: absolute;
-            border: 2px solid rgba(99, 102, 241, 0.3);
-            background: rgba(99, 102, 241, 0.1);
-            backdrop-filter: blur(5px);
-            animation: rotateGeometry 20s linear infinite;
-        }
-
-        .geometry-cube {
+        .theme-toggle,
+        .lang-toggle {
             width: 40px;
             height: 40px;
-            transform-style: preserve-3d;
-        }
-
-        .geometry-triangle {
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-bottom: 35px solid rgba(139, 92, 246, 0.2);
-            background: none;
-            border-radius: 0;
-        }
-
-        .geometry-octahedron {
-            width: 35px;
-            height: 35px;
-            background: rgba(6, 182, 212, 0.15);
-            border: 2px solid rgba(6, 182, 212, 0.4);
-            transform: rotate(45deg);
-            animation: rotateGeometry 25s linear infinite;
-        }
-
-        .geometry-torus {
-            width: 50px;
-            height: 50px;
-            border: 8px solid rgba(239, 68, 68, 0.3);
-            border-radius: 50%;
-            background: transparent;
-            animation: rotateGeometry 18s linear infinite;
-        }
-
-        .geometry-sphere {
-            width: 30px;
-            height: 30px;
-            background: radial-gradient(circle at 30% 30%, rgba(16, 185, 129, 0.4), rgba(16, 185, 129, 0.1));
-            border-radius: 50%;
-            border: 2px solid rgba(16, 185, 129, 0.5);
-            animation: rotateGeometry 22s linear infinite;
-        }
-
-        /* Particle System */
-        .particle-system {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            animation: particleFloat 8s ease-in-out infinite;
-            box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
-        }
-
-        /* 3D Brand Text Styles */
-        .brand-3d-text {
             display: flex;
-            gap: 0.1em;
+            align-items: center;
             justify-content: center;
-            margin-bottom: var(--spacing-xl);
-            perspective: 1000px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            transition: all var(--transition-fast);
         }
 
-        .brand-letter {
-            font-size: 5rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow:
-                0 4px 8px rgba(99, 102, 241, 0.3),
-                0 8px 16px rgba(139, 92, 246, 0.2);
-            animation: letterGlow 4s ease-in-out infinite;
-            position: relative;
-            cursor: pointer;
-            transition: all 0.5s ease;
-            transform-style: preserve-3d;
+        .theme-toggle:hover,
+        .lang-toggle:hover {
+            background: var(--bg-hover);
+            border-color: var(--border-secondary);
+            color: var(--text-primary);
         }
 
-        .brand-letter:nth-child(1) { animation-delay: 0s; }
-        .brand-letter:nth-child(2) { animation-delay: 0.3s; }
-        .brand-letter:nth-child(3) { animation-delay: 0.6s; }
-        .brand-letter:nth-child(4) { animation-delay: 0.9s; }
-        .brand-letter:nth-child(5) { animation-delay: 1.2s; }
-        .brand-letter:nth-child(6) { animation-delay: 1.5s; }
-
-        .brand-letter:hover {
-            transform: scale(1.2) rotateY(15deg);
-            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffa500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow:
-                0 6px 12px rgba(255, 215, 0, 0.4),
-                0 12px 24px rgba(255, 215, 0, 0.2);
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
         }
 
-
-
-
-
-        /* Animation Keyframes */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes letterGlow {
-            0%, 100% {
-                transform: translateY(0px) scale(1);
-                filter: brightness(1);
-            }
-            50% {
-                transform: translateY(-8px) scale(1.05);
-                filter: brightness(1.2);
-            }
-        }
-
-        @keyframes floatCoin {
-            0%, 100% {
-                transform: translateY(0px) rotateY(0deg);
-            }
-            25% {
-                transform: translateY(-20px) rotateY(90deg);
-            }
-            50% {
-                transform: translateY(-10px) rotateY(180deg);
-            }
-            75% {
-                transform: translateY(-25px) rotateY(270deg);
-            }
-        }
-
-        @keyframes rotateGeometry {
-            0% {
-                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-            }
-            100% {
-                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-            }
-        }
-
-        @keyframes particleFloat {
-            0%, 100% {
-                transform: translateY(0px) scale(1);
-                opacity: 0.3;
-            }
-            25% {
-                transform: translateY(-15px) scale(1.2);
-                opacity: 0.8;
-            }
-            50% {
-                transform: translateY(-30px) scale(0.8);
-                opacity: 1;
-            }
-            75% {
-                transform: translateY(-20px) scale(1.1);
-                opacity: 0.6;
-            }
-        }
-
-
-
-        /* ===== MARKET SECTION ===== */
-        .market {
-            padding: var(--spacing-3xl) 0;
-            background: var(--bg-secondary);
-        }
-
+        /* ===== PROFESSIONAL DATA DISPLAY ===== */
         .price-ticker {
-            background: var(--card-bg);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            margin-bottom: var(--spacing-2xl);
-            box-shadow: var(--shadow-md);
+            position: fixed;
+            top: 80px; /* Header height */
+            left: 0;
+            right: 0;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-primary);
+            padding: var(--space-3) 0;
             overflow: hidden;
+            z-index: var(--z-sticky);
         }
 
-        .ticker-content {
+        .ticker-scroll {
             display: flex;
-            animation: scroll 30s linear infinite;
-            gap: var(--spacing-xl);
+            animation: scroll-ticker 60s linear infinite;
+            gap: var(--space-8);
         }
 
-        @keyframes scroll {
+        @keyframes scroll-ticker {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
@@ -734,675 +418,751 @@
         .ticker-item {
             display: flex;
             align-items: center;
-            gap: var(--spacing-sm);
+            gap: var(--space-4);
             white-space: nowrap;
-            padding: var(--spacing-sm) var(--spacing-md);
-            background: var(--bg-secondary);
-            border-radius: var(--radius-md);
+            font-family: var(--font-mono);
+            font-size: var(--text-sm);
         }
 
         .ticker-symbol {
             font-weight: 600;
-            color: var(--text-color);
+            color: var(--text-primary);
+            min-width: 60px;
         }
 
         .ticker-price {
             font-weight: 500;
-            color: var(--primary-color);
+            color: var(--text-primary);
+            min-width: 80px;
         }
 
         .ticker-change {
-            font-size: var(--font-size-sm);
             font-weight: 500;
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-xs);
+            min-width: 60px;
+            text-align: center;
         }
 
         .ticker-change.positive {
-            color: var(--success-color);
+            color: var(--bull-green);
+            background: var(--bull-green-bg);
         }
 
         .ticker-change.negative {
-            color: var(--danger-color);
+            color: var(--bear-red);
+            background: var(--bear-red-bg);
         }
 
-        .market__grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
-        }
-
-        .market__card {
-            background: var(--card-bg);
+        /* Professional Tables */
+        .data-table {
+            width: 100%;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
             border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            box-shadow: var(--shadow-md);
-            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            overflow: hidden;
         }
 
-        .market__card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
+        .data-table th,
+        .data-table td {
+            padding: var(--space-4);
+            text-align: left;
+            border-bottom: 1px solid var(--border-primary);
         }
 
-        .market__header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .market__symbol {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-        }
-
-        .market__icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+        .data-table th {
+            background: var(--bg-tertiary);
             font-weight: 600;
-            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .market__name {
-            font-weight: 600;
-            color: var(--text-color);
+        .data-table td {
+            font-family: var(--font-mono);
+            font-size: var(--text-sm);
         }
 
-        .market__price {
-            font-size: var(--font-size-xl);
+        .data-table tr:hover {
+            background: var(--bg-hover);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ===== PROFESSIONAL MAIN CONTENT ===== */
+        .main-content {
+            margin-top: 64px;
+            min-height: calc(100vh - 64px);
+        }
+
+        .hero-section {
+            background: var(--bg-primary);
+            padding: calc(80px + 50px + var(--space-8)) 0 var(--space-12); /* Header + Ticker + spacing */
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: var(--text-4xl);
             font-weight: 700;
-            color: var(--text-color);
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+            line-height: 1.2;
         }
 
-        .market__change {
-            font-size: var(--font-size-sm);
-            font-weight: 500;
-            padding: var(--spacing-xs) var(--spacing-sm);
-            border-radius: var(--radius-sm);
-        }
-
-        .market__change.positive {
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--success-color);
-        }
-
-        .market__change.negative {
-            background: rgba(239, 68, 68, 0.1);
-            color: var(--danger-color);
-        }
-
-        .market__stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-md);
-        }
-
-        .market__stat {
-            text-align: center;
-        }
-
-        .market__stat-label {
-            font-size: var(--font-size-xs);
+        .hero-subtitle {
+            font-size: var(--text-xl);
             color: var(--text-secondary);
-            margin-bottom: var(--spacing-xs);
+            margin-bottom: var(--space-8);
+            line-height: 1.5;
         }
 
-        .market__stat-value {
-            font-weight: 600;
-            color: var(--text-color);
-        }
-
-        /* ===== FEATURES SECTION ===== */
-        .features {
-            padding: var(--spacing-3xl) 0;
-        }
-
-        .features__grid {
+        .hero-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-xl);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-6);
+            margin-top: var(--space-12);
         }
 
-        .feature__card {
-            background: var(--card-bg);
-            padding: var(--spacing-xl);
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
             border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
+            padding: var(--space-6);
             text-align: center;
-            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
         }
 
-        .feature__card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
+        .stat-number {
+            font-family: var(--font-mono);
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--primary-brand);
+            display: block;
+            margin-bottom: var(--space-2);
         }
 
-        .feature__icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--spacing-lg);
-            font-size: var(--font-size-xl);
-            color: white;
-        }
-
-        .feature__title {
-            font-size: var(--font-size-xl);
-            font-weight: 600;
-            margin-bottom: var(--spacing-md);
-            color: var(--text-color);
-        }
-
-        .feature__description {
+        .stat-label {
+            font-size: var(--text-sm);
             color: var(--text-secondary);
-            line-height: 1.6;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* ===== NEWS SECTION ===== */
-        .news {
-            padding: var(--spacing-3xl) 0;
+        /* Market Overview Section */
+        .market-section {
+            padding: var(--space-16) 0;
             background: var(--bg-secondary);
         }
 
-        .news__grid {
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-12);
+        }
+
+        .section-title {
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .section-subtitle {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+        }
+
+        .market-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-xl);
+            gap: var(--space-6);
         }
 
-        .news__card {
-            background: var(--card-bg);
+        .market-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-primary);
             border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            padding: var(--space-6);
+            transition: all var(--transition-normal);
         }
 
-        .news__card:hover {
-            transform: translateY(-5px);
+        .market-card:hover {
+            border-color: var(--border-secondary);
+            transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
 
-        .news__image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .news__content {
-            padding: var(--spacing-lg);
-        }
-
-        .news__category {
-            display: inline-block;
-            background: var(--gradient-primary);
-            color: white;
-            padding: var(--spacing-xs) var(--spacing-sm);
-            border-radius: var(--radius-sm);
-            font-size: var(--font-size-xs);
-            font-weight: 500;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .news__title {
-            font-size: var(--font-size-lg);
-            font-weight: 600;
-            margin-bottom: var(--spacing-md);
-            color: var(--text-color);
-        }
-
-        .news__excerpt {
-            color: var(--text-secondary);
-            margin-bottom: var(--spacing-md);
-            line-height: 1.6;
-        }
-
-        .news__date {
-            font-size: var(--font-size-sm);
-            color: var(--text-secondary);
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            background: var(--gradient-primary);
-            color: white;
-            padding: var(--spacing-3xl) 0 var(--spacing-lg);
-            position: relative;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://picsum.photos/id/5/1920/400') center/cover;
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        .footer__content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-xl);
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .footer__title {
-            font-size: var(--font-size-xl);
-            font-weight: 700;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .footer__subtitle {
-            font-size: var(--font-size-lg);
-            font-weight: 600;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .footer__description {
-            margin-bottom: var(--spacing-lg);
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        .footer__social {
+        .market-header {
             display: flex;
-            gap: var(--spacing-md);
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-4);
         }
 
-        .social__link {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
+        .market-symbol {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .market-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-brand);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: var(--font-size-lg);
-            transition: all var(--transition-fast);
+            font-weight: 700;
+            color: var(--bg-primary);
+            font-size: var(--text-sm);
         }
 
-        .social__link:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+        .market-name {
+            font-weight: 600;
+            color: var(--text-primary);
         }
 
-        .footer__list {
+        .market-code {
+            font-size: var(--text-sm);
+            color: var(--text-tertiary);
+            font-family: var(--font-mono);
+        }
+
+        .market-change {
+            font-family: var(--font-mono);
+            font-weight: 600;
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-sm);
+        }
+
+        .market-price {
+            font-family: var(--font-mono);
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .market-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+        }
+
+        .market-stat {
+            text-align: center;
+            padding: var(--space-3);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+        }
+
+        .market-stat-label {
+            font-size: var(--text-xs);
+            color: var(--text-tertiary);
+            margin-bottom: var(--space-1);
+            text-transform: uppercase;
+        }
+
+        .market-stat-value {
+            font-family: var(--font-mono);
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: var(--text-sm);
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: var(--space-16) 0;
+            background: var(--bg-primary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: var(--space-8);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--primary-brand);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-6);
+            font-size: var(--text-2xl);
+            color: var(--bg-primary);
+        }
+
+        .feature-title {
+            font-size: var(--text-xl);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ===== PROFESSIONAL FOOTER ===== */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-primary);
+            padding: var(--space-12) 0 var(--space-6);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-8);
+            margin-bottom: var(--space-8);
+        }
+
+        .footer-section h3 {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .footer-section p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--space-4);
+        }
+
+        .footer-links {
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-sm);
+            gap: var(--space-2);
         }
 
-        .footer__link {
-            opacity: 0.9;
-            transition: opacity var(--transition-fast);
+        .footer-link {
+            color: var(--text-secondary);
+            transition: color var(--transition-fast);
         }
 
-        .footer__link:hover {
-            opacity: 1;
+        .footer-link:hover {
+            color: var(--primary-brand);
         }
 
-        .footer__bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: var(--spacing-lg);
+        .footer-bottom {
+            border-top: 1px solid var(--border-primary);
+            padding-top: var(--space-6);
             text-align: center;
+            color: var(--text-tertiary);
+            font-size: var(--text-sm);
         }
 
-        .footer__copyright {
-            opacity: 0.8;
-        }
+
 
         /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 var(--space-4);
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .market-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
         @media (max-width: 768px) {
-            .nav__menu {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: var(--header-bg);
-                backdrop-filter: blur(10px);
-                flex-direction: column;
-                justify-content: flex-start;
-                padding: var(--spacing-xl);
-                transition: left var(--transition-normal);
+            .navbar {
+                padding: 0 var(--space-4);
             }
 
-            .nav__menu.show {
-                left: 0;
+            .navbar-nav {
+                display: none;
             }
 
-            .nav__list {
-                flex-direction: column;
-                width: 100%;
-                gap: var(--spacing-lg);
+            .mobile-menu-toggle {
+                display: flex;
             }
 
-            .nav__controls {
-                margin-top: var(--spacing-xl);
+            .hero-title {
+                font-size: var(--text-3xl);
             }
 
-            .nav__toggle {
-                display: block;
+            .hero-subtitle {
+                font-size: var(--text-lg);
             }
 
-            .hero__container {
+            .hero-stats {
                 grid-template-columns: 1fr;
-                text-align: center;
-                gap: var(--spacing-xl);
+                gap: var(--space-4);
             }
 
-            .hero__title {
-                font-size: var(--font-size-3xl);
-            }
-
-
-
-            .hero__stats {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-md);
-            }
-
-            .hero__3d-container {
-                height: 300px;
-                order: -1;
-            }
-
-            .floating-coin {
-                width: 40px;
-                height: 40px;
-                font-size: var(--font-size-xs);
-            }
-
-            .section__title {
-                font-size: var(--font-size-2xl);
-            }
-
-            .features__grid {
+            .market-grid {
                 grid-template-columns: 1fr;
             }
 
-            .news__grid {
+            .features-grid {
                 grid-template-columns: 1fr;
+                gap: var(--space-6);
             }
 
-            .footer__content {
+            .footer-content {
                 grid-template-columns: 1fr;
-                text-align: center;
+                gap: var(--space-6);
+            }
+
+            .ticker-item {
+                font-size: var(--text-xs);
+                gap: var(--space-2);
+            }
+
+            .ticker-symbol {
+                min-width: 40px;
+            }
+
+            .ticker-price {
+                min-width: 60px;
+            }
+
+            .ticker-change {
+                min-width: 50px;
             }
         }
 
         @media (max-width: 480px) {
             .container {
-                padding: 0 var(--spacing-sm);
+                padding: 0 var(--space-3);
             }
 
-            .hero {
-                padding: calc(70px + var(--spacing-xl)) 0 var(--spacing-xl);
+            .navbar {
+                padding: 0 var(--space-3);
             }
 
-            .hero__title {
-                font-size: var(--font-size-2xl);
+            .hero-section {
+                padding: var(--space-12) 0 var(--space-8);
             }
 
-            .btn {
-                padding: var(--spacing-sm) var(--spacing-lg);
-                font-size: var(--font-size-sm);
+            .hero-title {
+                font-size: var(--text-2xl);
             }
 
-            .market__grid {
-                grid-template-columns: 1fr;
+            .section-title {
+                font-size: var(--text-2xl);
+            }
+
+            .market-section,
+            .features-section {
+                padding: var(--space-12) 0;
+            }
+
+            .card {
+                padding: var(--space-4);
+            }
+
+            .market-card {
+                padding: var(--space-4);
+            }
+
+            .feature-card {
+                padding: var(--space-6);
             }
         }
+
+        /* ===== UTILITY CLASSES ===== */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+
+        .text-primary { color: var(--text-primary); }
+        .text-secondary { color: var(--text-secondary); }
+        .text-tertiary { color: var(--text-tertiary); }
+        .text-brand { color: var(--primary-brand); }
+        .text-bull { color: var(--bull-green); }
+        .text-bear { color: var(--bear-red); }
+
+        .bg-primary { background: var(--bg-primary); }
+        .bg-secondary { background: var(--bg-secondary); }
+        .bg-tertiary { background: var(--bg-tertiary); }
+
+        .border { border: 1px solid var(--border-primary); }
+        .border-secondary { border: 1px solid var(--border-secondary); }
+        .border-tertiary { border: 1px solid var(--border-tertiary); }
+
+        .rounded { border-radius: var(--radius-md); }
+        .rounded-lg { border-radius: var(--radius-lg); }
+        .rounded-xl { border-radius: var(--radius-xl); }
+
+        .shadow { box-shadow: var(--shadow-md); }
+        .shadow-lg { box-shadow: var(--shadow-lg); }
+
+        .transition { transition: all var(--transition-normal); }
+
+        /* Spacing utilities */
+        .p-2 { padding: var(--space-2); }
+        .p-4 { padding: var(--space-4); }
+        .p-6 { padding: var(--space-6); }
+        .p-8 { padding: var(--space-8); }
+
+        .m-2 { margin: var(--space-2); }
+        .m-4 { margin: var(--space-4); }
+        .m-6 { margin: var(--space-6); }
+        .m-8 { margin: var(--space-8); }
+
+        .mb-2 { margin-bottom: var(--space-2); }
+        .mb-4 { margin-bottom: var(--space-4); }
+        .mb-6 { margin-bottom: var(--space-6); }
+        .mb-8 { margin-bottom: var(--space-8); }
+
+        .mt-2 { margin-top: var(--space-2); }
+        .mt-4 { margin-top: var(--space-4); }
+        .mt-6 { margin-top: var(--space-6); }
+        .mt-8 { margin-top: var(--space-8); }
+
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
+    <!-- Professional Header -->
     <header class="header" id="header">
-        <nav class="nav container">
-            <div class="nav__brand">
-                <a href="#" class="nav__logo">
-                    <span class="nav__logo-text">BTDUex</span>
-                </a>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <i class="fas fa-chart-line"></i>
+                <span>BTDUex</span>
             </div>
-            
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link" data-key="nav-home">首頁</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#markets" class="nav__link" data-key="nav-markets">市場</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#trading" class="nav__link" data-key="nav-trading">交易</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link" data-key="nav-about">關於我們</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link" data-key="nav-contact">聯絡我們</a>
-                    </li>
-                </ul>
-                
-                <div class="nav__controls">
-                    <!-- Language Toggle -->
-                    <div class="language-toggle">
-                        <button class="language-btn" id="language-toggle">
-                            <span id="current-lang">English</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="language-dropdown" id="language-dropdown">
-                            <a href="#" class="language-option" data-lang="zh-TW">中文</a>
-                            <a href="#" class="language-option" data-lang="en">English</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Dark Mode Toggle -->
-                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+
+            <div class="navbar-nav" id="navbar-nav">
+                <a href="#home" class="nav-link active" data-key="nav-home">首頁</a>
+                <a href="#markets" class="nav-link" data-key="nav-markets">市場</a>
+                <a href="#about" class="nav-link" data-key="nav-about">關於我們</a>
+            </div>
+
+            <div class="navbar-controls">
+                <div class="control-group">
+                    <button class="lang-toggle" id="lang-toggle" title="Language">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
                         <i class="fas fa-moon"></i>
                     </button>
                 </div>
-            </div>
-            
-            <!-- Mobile Menu Toggle -->
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero__container container">
-                <div class="hero__content">
-                    <!-- 3D Brand Name -->
-                    <div class="brand-3d-text">
-                        <div class="brand-letter" data-letter="B">B</div>
-                        <div class="brand-letter" data-letter="T">T</div>
-                        <div class="brand-letter" data-letter="D">D</div>
-                        <div class="brand-letter" data-letter="U">U</div>
-                        <div class="brand-letter" data-letter="e">e</div>
-                        <div class="brand-letter" data-letter="x">x</div>
-                    </div>
+    <!-- Price Ticker -->
+    <div class="price-ticker" id="price-ticker">
+        <div class="ticker-scroll" id="ticker-scroll">
+            <!-- Dynamic ticker content will be inserted here -->
+        </div>
+    </div>
 
-                    <h1 class="hero__title" data-key="hero-title">
-                        安全可信的數位資產交易平台
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Professional Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-key="hero-title">
+                        專業數位資產交易平台
                     </h1>
-                    <p class="hero__description" data-key="hero-description">
-                        BTDUex 提供專業的加密貨幣交易服務，支援多種主流數位資產，讓您安心投資數位未來
+                    <p class="hero-subtitle" data-key="hero-description">
+                        BTDUex 提供機構級加密貨幣交易服務，支援多種主流數位資產，為全球用戶提供安全、高效的交易體驗
                     </p>
 
 
-                    <!-- Platform Stats -->
-                    <div class="hero__stats">
-                        <div class="hero__stat">
-                            <span class="hero__stat-number" data-key="stat-users">500K+</span>
-                            <span class="hero__stat-label" data-key="stat-users-label">全球用戶</span>
-                        </div>
-                        <div class="hero__stat">
-                            <span class="hero__stat-number" data-key="stat-volume">$2.5B</span>
-                            <span class="hero__stat-label" data-key="stat-volume-label">日交易量</span>
-                        </div>
-                        <div class="hero__stat">
-                            <span class="hero__stat-number" data-key="stat-coins">200+</span>
-                            <span class="hero__stat-label" data-key="stat-coins-label">支援幣種</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- 3D Crypto Coins Area -->
-                <div class="hero__3d-container">
-                    <!-- Floating Crypto Coins -->
-                    <div class="hero__floating-elements">
-                        <div class="floating-coin eth" style="top: 20%; left: 10%; animation-delay: -2s;">ETH</div>
-                        <div class="floating-coin" style="top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 0s;">BTC</div>
-                        <div class="floating-coin bnb" style="top: 40%; left: 80%; animation-delay: -4s;">BNB</div>
-                        <div class="floating-coin sol" style="top: 15%; right: 25%; animation-delay: -1s;">SOL</div>
-                        <div class="floating-coin ada" style="bottom: 25%; left: 15%; animation-delay: -3s;">ADA</div>
-
-                        <!-- Geometric Shapes -->
-                        <div class="floating-geometry geometry-cube" style="top: 10%; right: 20%; animation-delay: 0s;"></div>
-                        <div class="floating-geometry geometry-triangle" style="bottom: 20%; right: 10%; animation-delay: -10s;"></div>
-                        <div class="floating-geometry geometry-cube" style="top: 70%; left: 5%; animation-delay: -15s;"></div>
-                        <div class="floating-geometry geometry-octahedron" style="top: 35%; right: 5%; animation-delay: -5s;"></div>
-                        <div class="floating-geometry geometry-torus" style="bottom: 40%; right: 30%; animation-delay: -8s;"></div>
-                        <div class="floating-geometry geometry-sphere" style="top: 80%; right: 15%; animation-delay: -12s;"></div>
-
-                        <!-- Particle Effects -->
-                        <div class="particle-system">
-                            <div class="particle" style="top: 25%; left: 30%; animation-delay: 0s;"></div>
-                            <div class="particle" style="top: 45%; left: 60%; animation-delay: -1s;"></div>
-                            <div class="particle" style="top: 65%; left: 40%; animation-delay: -2s;"></div>
-                            <div class="particle" style="top: 35%; left: 70%; animation-delay: -3s;"></div>
-                            <div class="particle" style="top: 55%; left: 25%; animation-delay: -4s;"></div>
-                            <div class="particle" style="top: 75%; left: 65%; animation-delay: -5s;"></div>
+                    <!-- Professional Platform Stats -->
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" data-key="stat-users">500K+</span>
+                            <span class="stat-label" data-key="stat-users-label">全球用戶</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-key="stat-volume">$2.5B</span>
+                            <span class="stat-label" data-key="stat-volume-label">日交易量</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-key="stat-coins">200+</span>
+                            <span class="stat-label" data-key="stat-coins-label">支援幣種</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label" data-key="stat-uptime">系統穩定性</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Market Data Section -->
-        <section class="market" id="markets">
+        <!-- Professional Market Data Section -->
+        <section class="market-section" id="markets">
             <div class="container">
-                <h2 class="section__title" data-key="market-title">即時市場行情</h2>
-
-                <!-- Price Ticker -->
-                <div class="price-ticker" id="price-ticker">
-                    <div class="ticker-content" id="ticker-content">
-                        <!-- Dynamic content will be inserted here -->
-                    </div>
+                <div class="section-header">
+                    <h2 class="section-title" data-key="market-title">即時市場行情</h2>
+                    <p class="section-subtitle" data-key="market-subtitle">
+                        實時追蹤主流加密貨幣價格變動，掌握市場動態
+                    </p>
                 </div>
 
-                <!-- Market Cards -->
-                <div class="market__grid" id="market-grid">
+                <!-- Professional Market Grid -->
+                <div class="market-grid" id="market-grid">
                     <!-- Dynamic content will be inserted here -->
                 </div>
+
+                <!-- Professional Data Table -->
+                <div class="card mt-8">
+                    <div class="card-header">
+                        <h3 class="card-title" data-key="market-table-title">市場概覽</h3>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table class="data-table" id="market-table">
+                            <thead>
+                                <tr>
+                                    <th data-key="table-name">名稱</th>
+                                    <th data-key="table-price">價格</th>
+                                    <th data-key="table-change">24h變化</th>
+                                    <th data-key="table-volume">24h成交量</th>
+                                    <th data-key="table-market-cap">市值</th>
+                                </tr>
+                            </thead>
+                            <tbody id="market-table-body">
+                                <!-- Dynamic content will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Platform Features Section -->
-        <section class="features" id="about">
+        <!-- Professional Features Section -->
+        <section class="features-section" id="about">
             <div class="container">
-                <h2 class="section__title" data-key="features-title">平台優勢</h2>
-                <div class="features__grid">
-                    <div class="feature__card">
-                        <div class="feature__icon">
+                <div class="section-header">
+                    <h2 class="section-title" data-key="features-title">平台優勢</h2>
+                    <p class="section-subtitle" data-key="features-subtitle">
+                        專業級交易平台，為您提供安全、高效的數位資產交易服務
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3 class="feature__title" data-key="feature-security-title">安全保障</h3>
-                        <p class="feature__description" data-key="feature-security-desc">
-                            採用銀行級安全技術，多重加密保護您的資產安全
+                        <h3 class="feature-title" data-key="feature-security-title">機構級安全</h3>
+                        <p class="feature-description" data-key="feature-security-desc">
+                            採用銀行級安全技術，冷熱錢包分離，多重簽名保護您的資產安全
                         </p>
                     </div>
 
-                    <div class="feature__card">
-                        <div class="feature__icon">
-                            <i class="fas fa-percentage"></i>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="feature__title" data-key="feature-fees-title">低手續費</h3>
-                        <p class="feature__description" data-key="feature-fees-desc">
-                            業界最低的交易手續費，讓您的投資收益最大化
+                        <h3 class="feature-title" data-key="feature-trading-title">專業交易工具</h3>
+                        <p class="feature-description" data-key="feature-trading-desc">
+                            提供專業K線圖表、技術指標分析，滿足不同層級交易者需求
                         </p>
                     </div>
 
-                    <div class="feature__card">
-                        <div class="feature__icon">
-                            <i class="fas fa-tint"></i>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tachometer-alt"></i>
                         </div>
-                        <h3 class="feature__title" data-key="feature-liquidity-title">高流動性</h3>
-                        <p class="feature__description" data-key="feature-liquidity-desc">
-                            深度流動性池，確保快速成交和最佳價格
+                        <h3 class="feature-title" data-key="feature-speed-title">極速撮合</h3>
+                        <p class="feature-description" data-key="feature-speed-desc">
+                            毫秒級撮合引擎，確保訂單快速執行，不錯過任何交易機會
                         </p>
                     </div>
 
-                    <div class="feature__card">
-                        <div class="feature__icon">
+                    <div class="feature-card">
+                        <div class="feature-icon">
                             <i class="fas fa-headset"></i>
                         </div>
-                        <h3 class="feature__title" data-key="feature-support-title">24/7 客服</h3>
-                        <p class="feature__description" data-key="feature-support-desc">
-                            全天候專業客服團隊，隨時為您解決問題
+                        <h3 class="feature-title" data-key="feature-support-title">24/7 專業客服</h3>
+                        <p class="feature-description" data-key="feature-support-desc">
+                            全天候多語言專業客服團隊，隨時為您解決交易問題
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- News Section -->
-        <section class="news">
+        <!-- Professional News Section -->
+        <section class="market-section" id="news">
             <div class="container">
-                <h2 class="section__title" data-key="news-title">最新資訊</h2>
-                <div class="news__grid">
-                    <div class="news__card">
-                        <img src="https://picsum.photos/id/2/300/200" alt="News" class="news__image">
-                        <div class="news__content">
-                            <span class="news__category" data-key="news-market">市場動態</span>
-                            <h3 class="news__title" data-key="news-1-title">比特幣突破12萬美元創歷史新高</h3>
-                            <p class="news__excerpt" data-key="news-1-excerpt">
-                                2025年7月，比特幣再次寫下歷史新高，突破12萬美元整數關口，市場情緒極度樂觀...
-                            </p>
-                            <span class="news__date">2025-07-28</span>
+                <div class="section-header">
+                    <h2 class="section-title" data-key="news-title">市場資訊</h2>
+                    <p class="section-subtitle" data-key="news-subtitle">
+                        掌握最新市場動態，洞察行業趨勢
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="text-brand text-xs font-weight-600" data-key="news-market">市場動態</span>
+                        </div>
+                        <h3 class="text-lg font-weight-600 mb-4" data-key="news-1-title">
+                            比特幣突破12萬美元創歷史新高
+                        </h3>
+                        <p class="text-secondary mb-4" data-key="news-1-excerpt">
+                            2025年7月，比特幣再次寫下歷史新高，突破12萬美元整數關口，市場情緒極度樂觀...
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-tertiary text-sm">2025-07-28</span>
+                            <a href="#" class="text-brand text-sm" data-key="read-more">閱讀更多 →</a>
                         </div>
                     </div>
 
-                    <div class="news__card">
-                        <img src="https://picsum.photos/id/3/300/200" alt="News" class="news__image">
-                        <div class="news__content">
-                            <span class="news__category" data-key="news-policy">政策動態</span>
-                            <h3 class="news__title" data-key="news-2-title">特朗普政府建立加密貨幣戰略儲備</h3>
-                            <p class="news__excerpt" data-key="news-2-excerpt">
-                                美國總統特朗普宣布建立國家級加密貨幣戰略儲備，首批納入比特幣、以太坊等主流數字資產...
-                            </p>
-                            <span class="news__date">2025-07-26</span>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="text-brand text-xs font-weight-600" data-key="news-policy">政策動態</span>
+                        </div>
+                        <h3 class="text-lg font-weight-600 mb-4" data-key="news-2-title">
+                            特朗普政府建立加密貨幣戰略儲備
+                        </h3>
+                        <p class="text-secondary mb-4" data-key="news-2-excerpt">
+                            美國總統特朗普宣布建立國家級加密貨幣戰略儲備，首批納入比特幣、以太坊等主流數字資產...
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-tertiary text-sm">2025-07-26</span>
+                            <a href="#" class="text-brand text-sm" data-key="read-more">閱讀更多 →</a>
                         </div>
                     </div>
 
-                    <div class="news__card">
-                        <img src="https://picsum.photos/id/4/300/200" alt="News" class="news__image">
-                        <div class="news__content">
-                            <span class="news__category" data-key="news-market">市場動態</span>
-                            <h3 class="news__title" data-key="news-3-title">以太坊現貨交易量首次超越比特幣</h3>
-                            <p class="news__excerpt" data-key="news-3-excerpt">
-                                CryptoQuant數據顯示，一年多來首次，以太坊現貨交易量超過比特幣，顯示市場結構正在發生變化...
-                            </p>
-                            <span class="news__date">2025-07-24</span>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="text-brand text-xs font-weight-600" data-key="news-market">市場動態</span>
+                        </div>
+                        <h3 class="text-lg font-weight-600 mb-4" data-key="news-3-title">
+                            以太坊現貨交易量首次超越比特幣
+                        </h3>
+                        <p class="text-secondary mb-4" data-key="news-3-excerpt">
+                            CryptoQuant數據顯示，一年多來首次，以太坊現貨交易量超過比特幣，顯示市場結構正在發生變化...
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-tertiary text-sm">2025-07-24</span>
+                            <a href="#" class="text-brand text-sm" data-key="read-more">閱讀更多 →</a>
                         </div>
                     </div>
                 </div>
@@ -1410,83 +1170,89 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Professional Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <h3 class="footer__title">BTDUex</h3>
-                    <p class="footer__description" data-key="footer-description">
-                        專業的數位資產交易平台，為全球用戶提供安全、便捷的加密貨幣交易服務。
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BTDUex</h3>
+                    <p data-key="footer-description">
+                        專業的數位資產交易平台，為全球用戶提供機構級加密貨幣交易服務。
                     </p>
-                    <div class="footer__social">
-                        <a href="#" class="social__link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social__link" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-key="footer-trading">交易服務</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link" data-key="footer-spot">現貨交易</a>
+                        <a href="#" class="footer-link" data-key="footer-futures">合約交易</a>
+                        <a href="#" class="footer-link" data-key="footer-margin">槓桿交易</a>
+                        <a href="#" class="footer-link" data-key="footer-staking">質押服務</a>
+                        <a href="#" class="footer-link" data-key="footer-earn">理財產品</a>
                     </div>
                 </div>
 
-                <div class="footer__section">
-                    <h4 class="footer__subtitle" data-key="footer-about">關於我們</h4>
-                    <ul class="footer__list">
-                        <li><a href="#" class="footer__link" data-key="footer-company">公司介紹</a></li>
-                        <li><a href="#" class="footer__link" data-key="footer-team">團隊成員</a></li>
-                        <li><a href="#" class="footer__link" data-key="footer-careers">加入我們</a></li>
-                    </ul>
+                <div class="footer-section">
+                    <h3 data-key="footer-support">支援服務</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link" data-key="footer-help">幫助中心</a>
+                        <a href="#" class="footer-link" data-key="footer-api">API 文檔</a>
+                        <a href="#" class="footer-link" data-key="footer-fees">費率說明</a>
+                        <a href="#" class="footer-link" data-key="footer-security">安全中心</a>
+                        <a href="#" class="footer-link" data-key="footer-contact">聯絡客服</a>
+                    </div>
                 </div>
 
-                <div class="footer__section">
-                    <h4 class="footer__subtitle" data-key="footer-services">服務項目</h4>
-                    <ul class="footer__list">
-                        <li><a href="#" class="footer__link" data-key="footer-spot">現貨交易</a></li>
-                        <li><a href="#" class="footer__link" data-key="footer-futures">合約交易</a></li>
-                        <li><a href="#" class="footer__link" data-key="footer-staking">質押服務</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__section">
-                    <h4 class="footer__subtitle" data-key="footer-contact">聯絡我們</h4>
-                    <ul class="footer__list">
-                        <li><a href="mailto:support@BTDUex.com" class="footer__link">support@BTDUex.com</a></li>
-                        <li><a href="#" class="footer__link" data-key="footer-help">幫助中心</a></li>
-                        <li><a href="#" class="footer__link" data-key="footer-feedback">意見回饋</a></li>
-                    </ul>
+                <div class="footer-section">
+                    <h3 data-key="footer-company">公司資訊</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link" data-key="footer-about">關於我們</a>
+                        <a href="#" class="footer-link" data-key="footer-careers">人才招募</a>
+                        <a href="#" class="footer-link" data-key="footer-news">新聞中心</a>
+                        <a href="#" class="footer-link" data-key="footer-legal">法律聲明</a>
+                        <a href="#" class="footer-link" data-key="footer-privacy">隱私政策</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer__bottom">
-                <p class="footer__copyright">
-                    <span data-key="footer-rights">&copy; 2025 BTDUEX PTY LTD版權所有</span>
+            <div class="footer-bottom">
+                <p data-key="footer-rights">
+                    &copy; 2025 BTDUEX PTY LTD. 版權所有
                 </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Language translations
+        // Professional Trading Platform JavaScript
         const translations = {
             'zh-TW': {
                 'nav-home': '首頁',
                 'nav-markets': '市場',
-                'nav-trading': '交易',
                 'nav-about': '關於我們',
-                'nav-contact': '聯絡我們',
-                'hero-title': '安全可信的數位資產交易平台',
-                'hero-description': 'BTDUex 提供專業的加密貨幣交易服務，支援多種主流數位資產，讓您安心投資數位未來',
+                'hero-title': '專業數位資產交易平台',
+                'hero-description': 'BTDUex 提供機構級加密貨幣交易服務，支援多種主流數位資產，為全球用戶提供安全、高效的交易體驗',
                 'market-title': '即時市場行情',
+                'market-subtitle': '實時追蹤主流加密貨幣價格變動，掌握市場動態',
+                'market-table-title': '市場概覽',
+                'table-name': '名稱',
+                'table-price': '價格',
+                'table-change': '24h變化',
+                'table-volume': '24h成交量',
+                'table-market-cap': '市值',
                 'features-title': '平台優勢',
-                'feature-security-title': '安全保障',
-                'feature-security-desc': '採用銀行級安全技術，多重加密保護您的資產安全',
-                'feature-fees-title': '低手續費',
-                'feature-fees-desc': '業界最低的交易手續費，讓您的投資收益最大化',
-                'feature-liquidity-title': '高流動性',
-                'feature-liquidity-desc': '深度流動性池，確保快速成交和最佳價格',
-                'feature-support-title': '24/7 客服',
-                'feature-support-desc': '全天候專業客服團隊，隨時為您解決問題',
-                'news-title': '最新資訊',
+                'features-subtitle': '專業級交易平台，為您提供安全、高效的數位資產交易服務',
+                'feature-security-title': '機構級安全',
+                'feature-security-desc': '採用銀行級安全技術，冷熱錢包分離，多重簽名保護您的資產安全',
+                'feature-trading-title': '專業交易工具',
+                'feature-trading-desc': '提供專業K線圖表、技術指標分析，滿足不同層級交易者需求',
+                'feature-speed-title': '極速撮合',
+                'feature-speed-desc': '毫秒級撮合引擎，確保訂單快速執行，不錯過任何交易機會',
+                'feature-support-title': '24/7 專業客服',
+                'feature-support-desc': '全天候多語言專業客服團隊，隨時為您解決交易問題',
+                'news-title': '市場資訊',
+                'news-subtitle': '掌握最新市場動態，洞察行業趨勢',
                 'news-market': '市場動態',
                 'news-policy': '政策動態',
                 'news-1-title': '比特幣突破12萬美元創歷史新高',
@@ -1495,45 +1261,61 @@
                 'news-2-excerpt': '美國總統特朗普宣布建立國家級加密貨幣戰略儲備，首批納入比特幣、以太坊等主流數字資產...',
                 'news-3-title': '以太坊現貨交易量首次超越比特幣',
                 'news-3-excerpt': 'CryptoQuant數據顯示，一年多來首次，以太坊現貨交易量超過比特幣，顯示市場結構正在發生變化...',
-                'footer-description': '專業的數位資產交易平台，為全球用戶提供安全、便捷的加密貨幣交易服務。',
+                'footer-description': '專業的數位資產交易平台，為全球用戶提供機構級加密貨幣交易服務。',
+                'footer-trading': '交易服務',
+                'footer-support': '支援服務',
+                'footer-company': '公司資訊',
                 'footer-about': '關於我們',
-                'footer-company': '公司介紹',
-                'footer-team': '團隊成員',
-                'footer-careers': '加入我們',
-                'footer-services': '服務項目',
+                'footer-careers': '人才招募',
+                'footer-news': '新聞中心',
+                'footer-legal': '法律聲明',
+                'footer-privacy': '隱私政策',
                 'footer-spot': '現貨交易',
                 'footer-futures': '合約交易',
+                'footer-margin': '槓桿交易',
                 'footer-staking': '質押服務',
-                'footer-contact': '聯絡我們',
+                'footer-earn': '理財產品',
                 'footer-help': '幫助中心',
-                'footer-feedback': '意見回饋',
-                'footer-rights': '© 2025 BTDUEX PTY LTD版權所有',
+                'footer-api': 'API 文檔',
+                'footer-fees': '費率說明',
+                'footer-security': '安全中心',
+                'footer-contact': '聯絡客服',
+                'footer-rights': '© 2025 BTDUEX PTY LTD. 版權所有',
+                'read-more': '閱讀更多 →',
                 'stat-users': '500K+',
                 'stat-users-label': '全球用戶',
                 'stat-volume': '$2.5B',
                 'stat-volume-label': '日交易量',
                 'stat-coins': '200+',
-                'stat-coins-label': '支援幣種'
+                'stat-coins-label': '支援幣種',
+                'stat-uptime': '系統穩定性'
             },
             'en': {
                 'nav-home': 'Home',
                 'nav-markets': 'Markets',
-                'nav-trading': 'Trading',
-                'nav-about': 'About Us',
-                'nav-contact': 'Contact',
-                'hero-title': 'Secure and Trusted Digital Asset Trading Platform',
-                'hero-description': 'BTDUex provides professional cryptocurrency trading services, supporting various mainstream digital assets for secure investment in the digital future',
+                'nav-about': 'About',
+                'hero-title': 'Professional Digital Asset Trading Platform',
+                'hero-description': 'BTDUex provides institutional-grade cryptocurrency trading services, supporting various mainstream digital assets for secure and efficient trading experience',
                 'market-title': 'Real-time Market Data',
+                'market-subtitle': 'Track mainstream cryptocurrency price movements in real-time and stay informed about market dynamics',
+                'market-table-title': 'Market Overview',
+                'table-name': 'Name',
+                'table-price': 'Price',
+                'table-change': '24h Change',
+                'table-volume': '24h Volume',
+                'table-market-cap': 'Market Cap',
                 'features-title': 'Platform Advantages',
-                'feature-security-title': 'Security Guarantee',
-                'feature-security-desc': 'Bank-level security technology with multi-layer encryption to protect your assets',
-                'feature-fees-title': 'Low Fees',
-                'feature-fees-desc': 'Industry-lowest trading fees to maximize your investment returns',
-                'feature-liquidity-title': 'High Liquidity',
-                'feature-liquidity-desc': 'Deep liquidity pools ensure fast execution and best prices',
-                'feature-support-title': '24/7 Support',
-                'feature-support-desc': 'Round-the-clock professional customer service team ready to help',
-                'news-title': 'Latest News',
+                'features-subtitle': 'Professional-grade trading platform providing secure and efficient digital asset trading services',
+                'feature-security-title': 'Institutional Security',
+                'feature-security-desc': 'Bank-level security technology with cold/hot wallet separation and multi-signature protection for your assets',
+                'feature-trading-title': 'Professional Trading Tools',
+                'feature-trading-desc': 'Professional candlestick charts and technical indicator analysis to meet different levels of trader needs',
+                'feature-speed-title': 'Ultra-fast Matching',
+                'feature-speed-desc': 'Millisecond-level matching engine ensures rapid order execution without missing any trading opportunities',
+                'feature-support-title': '24/7 Professional Support',
+                'feature-support-desc': 'Round-the-clock multilingual professional customer service team ready to solve your trading issues',
+                'news-title': 'Market News',
+                'news-subtitle': 'Stay informed about the latest market dynamics and industry trends',
                 'news-market': 'Market News',
                 'news-policy': 'Policy Updates',
                 'news-1-title': 'Bitcoin Breaks $120,000 Setting New All-Time High',
@@ -1542,37 +1324,45 @@
                 'news-2-excerpt': 'President Trump announces the creation of a national cryptocurrency strategic reserve, initially including Bitcoin, Ethereum and other major digital assets...',
                 'news-3-title': 'Ethereum Spot Trading Volume Surpasses Bitcoin for First Time',
                 'news-3-excerpt': 'CryptoQuant data shows that for the first time in over a year, Ethereum spot trading volume exceeds Bitcoin, indicating changing market dynamics...',
-                'footer-description': 'Professional digital asset trading platform providing secure and convenient cryptocurrency trading services to global users.',
-                'footer-about': 'About Us',
+                'footer-description': 'Professional digital asset trading platform providing institutional-grade cryptocurrency trading services to global users.',
+                'footer-trading': 'Trading Services',
+                'footer-support': 'Support Services',
                 'footer-company': 'Company Info',
-                'footer-team': 'Team Members',
-                'footer-careers': 'Join Us',
-                'footer-services': 'Services',
+                'footer-about': 'About Us',
+                'footer-careers': 'Careers',
+                'footer-news': 'News Center',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Privacy Policy',
                 'footer-spot': 'Spot Trading',
                 'footer-futures': 'Futures Trading',
+                'footer-margin': 'Margin Trading',
                 'footer-staking': 'Staking Services',
-                'footer-contact': 'Contact Us',
+                'footer-earn': 'Earn Products',
                 'footer-help': 'Help Center',
-                'footer-feedback': 'Feedback',
-                'footer-rights': '© 2025 BTDUEX PTY LTD All Rights Reserved',
+                'footer-api': 'API Docs',
+                'footer-fees': 'Fee Schedule',
+                'footer-security': 'Security Center',
+                'footer-contact': 'Contact Support',
+                'footer-rights': '© 2025 BTDUEX PTY LTD. All Rights Reserved',
+                'read-more': 'Read More →',
                 'stat-users': '500K+',
                 'stat-users-label': 'Global Users',
                 'stat-volume': '$2.5B',
                 'stat-volume-label': 'Daily Volume',
                 'stat-coins': '200+',
-                'stat-coins-label': 'Supported Coins'
+                'stat-coins-label': 'Supported Coins',
+                'stat-uptime': 'System Uptime'
             }
         };
 
-        // Current language
+        // Professional Trading Platform Variables
         let currentLang = localStorage.getItem('language') || 'en';
-
-        // Market data cache
+        let currentTheme = localStorage.getItem('theme') || 'dark';
         let marketData = {};
         let lastUpdateTime = 0;
         const UPDATE_INTERVAL = 30000; // 30 seconds
 
-        // Cryptocurrency list
+        // Professional cryptocurrency list
         const cryptoList = [
             { id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin' },
             { id: 'ethereum', symbol: 'ETH', name: 'Ethereum' },
@@ -1588,30 +1378,36 @@
             { id: 'polkadot', symbol: 'DOT', name: 'Polkadot' }
         ];
 
-        // Initialize
+        // Professional initialization
         document.addEventListener('DOMContentLoaded', function() {
             initializeTheme();
             initializeLanguage();
             initializeNavigation();
             initializeMarketData();
-            initialize3DScene();
+            initializeTicker();
+            initializeScrollEffects();
+            initializePerformanceOptimizations();
         });
 
-        // Theme functionality
+        // Professional Theme functionality
         function initializeTheme() {
             const themeToggle = document.getElementById('theme-toggle');
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            updateThemeIcon(savedTheme);
-            
+
+            // Set initial theme (default to dark for professional look)
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            updateThemeIcon(currentTheme);
+
             themeToggle.addEventListener('click', function() {
-                const currentTheme = document.documentElement.getAttribute('data-theme');
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                
-                document.documentElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-                updateThemeIcon(newTheme);
+                currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', currentTheme);
+                localStorage.setItem('theme', currentTheme);
+                updateThemeIcon(currentTheme);
+
+                // Smooth transition
+                document.body.style.transition = 'all 0.2s ease';
+                setTimeout(() => {
+                    document.body.style.transition = '';
+                }, 200);
             });
         }
 
@@ -1620,19 +1416,15 @@
             icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
 
-        // Language functionality
+        // Professional Language functionality
         function initializeLanguage() {
             updateLanguage(currentLang);
-            
-            const languageOptions = document.querySelectorAll('.language-option');
-            languageOptions.forEach(option => {
-                option.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const lang = this.getAttribute('data-lang');
-                    currentLang = lang;
-                    localStorage.setItem('language', lang);
-                    updateLanguage(lang);
-                });
+
+            const langToggle = document.getElementById('lang-toggle');
+            langToggle.addEventListener('click', function() {
+                currentLang = currentLang === 'en' ? 'zh-TW' : 'en';
+                localStorage.setItem('language', currentLang);
+                updateLanguage(currentLang);
             });
         }
 
@@ -1644,30 +1436,52 @@
                     element.textContent = translations[lang][key];
                 }
             });
-            
-            document.getElementById('current-lang').textContent = lang === 'en' ? 'English' : '中文';
+
             document.documentElement.lang = lang;
         }
 
-        // Navigation functionality
+        // Professional Navigation functionality
         function initializeNavigation() {
-            const navToggle = document.getElementById('nav-toggle');
-            const navMenu = document.getElementById('nav-menu');
+            const mobileToggle = document.getElementById('mobile-menu-toggle');
+            const navbarNav = document.getElementById('navbar-nav');
 
-            navToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-            });
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    navbarNav.classList.toggle('show');
+                    const icon = this.querySelector('i');
+                    icon.className = navbarNav.classList.contains('show') ? 'fas fa-times' : 'fas fa-bars';
+                });
+            }
 
-            // Close mobile menu when clicking on links
-            const navLinks = document.querySelectorAll('.nav__link');
+            // Active link highlighting
+            const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    navMenu.classList.remove('show');
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Add active class to clicked link
+                    this.classList.add('active');
+
+                    // Smooth scroll to section
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+
+                    // Close mobile menu
+                    if (navbarNav.classList.contains('show')) {
+                        navbarNav.classList.remove('show');
+                        const icon = mobileToggle.querySelector('i');
+                        icon.className = 'fas fa-bars';
+                    }
                 });
             });
         }
 
-        // Market data functionality
+        // Professional Market data functionality
         function initializeMarketData() {
             fetchMarketData();
             setInterval(fetchMarketData, UPDATE_INTERVAL);
@@ -1677,7 +1491,7 @@
             try {
                 const now = Date.now();
                 if (now - lastUpdateTime < UPDATE_INTERVAL && Object.keys(marketData).length > 0) {
-                    return; // Use cached data
+                    return;
                 }
 
                 const ids = cryptoList.map(crypto => crypto.id).join(',');
@@ -1691,34 +1505,39 @@
                 marketData = data;
                 lastUpdateTime = now;
 
-                updatePriceTicker();
                 updateMarketCards();
+                updateMarketTable();
             } catch (error) {
                 console.error('Error fetching market data:', error);
-                // Use mock data as fallback
                 useMockData();
             }
         }
 
         function useMockData() {
             marketData = {
-                'bitcoin': { usd: 45000, usd_24h_change: 2.5, usd_market_cap: 850000000000, usd_24h_vol: 25000000000 },
-                'ethereum': { usd: 3200, usd_24h_change: 1.8, usd_market_cap: 380000000000, usd_24h_vol: 15000000000 },
-                'binancecoin': { usd: 320, usd_24h_change: -0.5, usd_market_cap: 50000000000, usd_24h_vol: 2000000000 },
-                'ripple': { usd: 0.65, usd_24h_change: 3.2, usd_market_cap: 35000000000, usd_24h_vol: 1500000000 },
-                'cardano': { usd: 0.48, usd_24h_change: -1.2, usd_market_cap: 16000000000, usd_24h_vol: 800000000 },
-                'solana': { usd: 95, usd_24h_change: 4.1, usd_market_cap: 42000000000, usd_24h_vol: 2500000000 }
+                'bitcoin': { usd: 120000, usd_24h_change: 2.5, usd_market_cap: 2350000000000, usd_24h_vol: 45000000000 },
+                'ethereum': { usd: 4200, usd_24h_change: 1.8, usd_market_cap: 505000000000, usd_24h_vol: 25000000000 },
+                'binancecoin': { usd: 680, usd_24h_change: -0.5, usd_market_cap: 98000000000, usd_24h_vol: 3200000000 },
+                'ripple': { usd: 1.25, usd_24h_change: 3.2, usd_market_cap: 70000000000, usd_24h_vol: 2800000000 },
+                'cardano': { usd: 0.85, usd_24h_change: -1.2, usd_market_cap: 30000000000, usd_24h_vol: 1200000000 },
+                'solana': { usd: 180, usd_24h_change: 4.1, usd_market_cap: 85000000000, usd_24h_vol: 4500000000 }
             };
-            updatePriceTicker();
             updateMarketCards();
+            updateMarketTable();
         }
 
-        function updatePriceTicker() {
-            const tickerContent = document.getElementById('ticker-content');
-            if (!tickerContent) return;
+        // Professional Ticker functionality
+        function initializeTicker() {
+            updateTicker();
+            setInterval(updateTicker, 5000); // Update every 5 seconds for dynamic effect
+        }
+
+        function updateTicker() {
+            const tickerScroll = document.getElementById('ticker-scroll');
+            if (!tickerScroll) return;
 
             let tickerHTML = '';
-            cryptoList.slice(0, 8).forEach(crypto => {
+            cryptoList.forEach(crypto => {
                 const data = marketData[crypto.id];
                 if (data) {
                     const changeClass = data.usd_24h_change >= 0 ? 'positive' : 'negative';
@@ -1734,7 +1553,8 @@
                 }
             });
 
-            tickerContent.innerHTML = tickerHTML;
+            // Duplicate content for seamless scrolling
+            tickerScroll.innerHTML = tickerHTML + tickerHTML;
         }
 
         function updateMarketCards() {
@@ -1749,28 +1569,28 @@
                     const changeSymbol = data.usd_24h_change >= 0 ? '+' : '';
 
                     cardsHTML += `
-                        <div class="market__card">
-                            <div class="market__header">
-                                <div class="market__symbol">
-                                    <div class="market__icon">${crypto.symbol.charAt(0)}</div>
+                        <div class="market-card">
+                            <div class="market-header">
+                                <div class="market-symbol">
+                                    <div class="market-icon">${crypto.symbol.charAt(0)}</div>
                                     <div>
-                                        <div class="market__name">${crypto.name}</div>
-                                        <div style="font-size: var(--font-size-sm); color: var(--text-secondary);">${crypto.symbol}</div>
+                                        <div class="market-name">${crypto.name}</div>
+                                        <div class="market-code">${crypto.symbol}</div>
                                     </div>
                                 </div>
-                                <div class="market__change ${changeClass}">
+                                <div class="market-change ${changeClass}">
                                     ${changeSymbol}${data.usd_24h_change.toFixed(2)}%
                                 </div>
                             </div>
-                            <div class="market__price">$${formatPrice(data.usd)}</div>
-                            <div class="market__stats">
-                                <div class="market__stat">
-                                    <div class="market__stat-label">Market Cap</div>
-                                    <div class="market__stat-value">$${formatLargeNumber(data.usd_market_cap)}</div>
+                            <div class="market-price">$${formatPrice(data.usd)}</div>
+                            <div class="market-stats">
+                                <div class="market-stat">
+                                    <div class="market-stat-label">Market Cap</div>
+                                    <div class="market-stat-value">$${formatLargeNumber(data.usd_market_cap)}</div>
                                 </div>
-                                <div class="market__stat">
-                                    <div class="market__stat-label">24h Volume</div>
-                                    <div class="market__stat-value">$${formatLargeNumber(data.usd_24h_vol)}</div>
+                                <div class="market-stat">
+                                    <div class="market-stat-label">24h Volume</div>
+                                    <div class="market-stat-value">$${formatLargeNumber(data.usd_24h_vol)}</div>
                                 </div>
                             </div>
                         </div>
@@ -1781,6 +1601,41 @@
             marketGrid.innerHTML = cardsHTML;
         }
 
+        function updateMarketTable() {
+            const tableBody = document.getElementById('market-table-body');
+            if (!tableBody) return;
+
+            let tableHTML = '';
+            cryptoList.forEach(crypto => {
+                const data = marketData[crypto.id];
+                if (data) {
+                    const changeClass = data.usd_24h_change >= 0 ? 'text-bull' : 'text-bear';
+                    const changeSymbol = data.usd_24h_change >= 0 ? '+' : '';
+
+                    tableHTML += `
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="market-icon">${crypto.symbol.charAt(0)}</div>
+                                    <div>
+                                        <div class="font-weight-600">${crypto.name}</div>
+                                        <div class="text-tertiary text-sm">${crypto.symbol}</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="font-weight-600">$${formatPrice(data.usd)}</td>
+                            <td class="${changeClass} font-weight-600">${changeSymbol}${data.usd_24h_change.toFixed(2)}%</td>
+                            <td>$${formatLargeNumber(data.usd_24h_vol)}</td>
+                            <td>$${formatLargeNumber(data.usd_market_cap)}</td>
+                        </tr>
+                    `;
+                }
+            });
+
+            tableBody.innerHTML = tableHTML;
+        }
+
+        // Professional utility functions
         function formatPrice(price) {
             if (price >= 1) {
                 return price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -1802,56 +1657,70 @@
             return num.toString();
         }
 
-        // Performance optimizations
-        function initializePerformanceOptimizations() {
-            // Lazy loading for images
+        // Professional Scroll Effects
+        function initializeScrollEffects() {
+            // Header scroll effect
+            window.addEventListener('scroll', throttle(function() {
+                const scrolled = window.pageYOffset;
+                const header = document.querySelector('.header');
+
+                if (scrolled > 50) {
+                    header.style.boxShadow = 'var(--shadow-lg)';
+                } else {
+                    header.style.boxShadow = 'none';
+                }
+            }, 16));
+
+            // Intersection Observer for animations
             if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver((entries, observer) => {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                            imageObserver.unobserve(img);
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
                         }
                     });
-                });
+                }, observerOptions);
 
-                document.querySelectorAll('img[data-src]').forEach(img => {
-                    imageObserver.observe(img);
+                // Observe elements for scroll animations
+                document.querySelectorAll('.feature-card, .market-card, .card').forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(20px)';
+                    el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                    observer.observe(el);
                 });
             }
+        }
 
+        // Professional Performance optimizations
+        function initializePerformanceOptimizations() {
             // Preload critical resources
             const preloadLink = document.createElement('link');
             preloadLink.rel = 'preload';
-            preloadLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+            preloadLink.href = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap';
             preloadLink.as = 'style';
             document.head.appendChild(preloadLink);
 
-            // Service Worker registration for caching (if available)
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    // Service worker would be implemented here for production
-                    console.log('Service Worker support detected');
-                });
+            // Optimize animations for accessibility
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            if (prefersReducedMotion.matches) {
+                document.documentElement.style.setProperty('--transition-fast', '0s');
+                document.documentElement.style.setProperty('--transition-normal', '0s');
+                document.documentElement.style.setProperty('--transition-slow', '0s');
+            }
+
+            // Initialize mock data immediately for better UX
+            if (Object.keys(marketData).length === 0) {
+                useMockData();
             }
         }
 
-        // Debounce function for performance
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
-        }
-
-        // Throttle function for scroll events
+        // Professional utility functions
         function throttle(func, limit) {
             let inThrottle;
             return function() {
@@ -1865,18 +1734,35 @@
             }
         }
 
-        // Initialize performance optimizations
-        document.addEventListener('DOMContentLoaded', function() {
-            initializePerformanceOptimizations();
+        // Professional error handling
+        window.addEventListener('error', function(e) {
+            console.error('Application error:', e.error);
         });
 
-        // CSS-based 3D Brand Animation
-        function initialize3DScene() {
-            console.log('CSS 3D Brand animation initialized');
-            // All animations are handled by CSS - no JavaScript needed!
-        }
+        window.addEventListener('unhandledrejection', function(e) {
+            console.error('Unhandled promise rejection:', e.reason);
+        });
 
+        // Professional accessibility improvements
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                // Close any open mobile menus
+                const navbarNav = document.getElementById('navbar-nav');
+                if (navbarNav && navbarNav.classList.contains('show')) {
+                    navbarNav.classList.remove('show');
+                    const mobileToggle = document.getElementById('mobile-menu-toggle');
+                    if (mobileToggle) {
+                        const icon = mobileToggle.querySelector('i');
+                        icon.className = 'fas fa-bars';
+                    }
+                }
+            }
+        });
 
+        // Professional console branding
+        console.log('%c🏛️ BTDUex Professional Trading Platform', 'color: #f0b90b; font-size: 16px; font-weight: bold;');
+        console.log('%cInstitutional-grade cryptocurrency trading platform', 'color: #848e9c; font-size: 14px;');
+        console.log('%cFeatures: Real-time data, professional UI, responsive design', 'color: #b7bdc6; font-size: 12px;');
     </script>
 </body>
 </html>
