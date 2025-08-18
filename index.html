@@ -1,125 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTDUex - Professional Digital Asset Trading Platform</title>
-    <meta name="description" content="BTDUex is a professional digital asset trading platform providing institutional-grade trading services for Bitcoin, Ethereum and other cryptocurrencies.">
+    <title>BTDUEX - Professional Cryptocurrency Trading Terminal</title>
+    <meta name="description" content="BTDUEX Professional Trading Terminal - Institutional-grade cryptocurrency spot trading platform with real-time market data and advanced trading tools.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* ===== PROFESSIONAL TRADING PLATFORM VARIABLES ===== */
+        /* Bloomberg Terminal Style Variables */
         :root {
-            /* Professional Color Palette */
-            --primary-brand: #f0b90b;
-            --primary-brand-dark: #d9a441;
-            --primary-blue: #1e40af;
-            --primary-blue-light: #3b82f6;
+            /* Bloomberg Color Palette */
+            --bloomberg-orange: #ff6600;
+            --bloomberg-orange-dark: #e55a00;
+            --bloomberg-orange-light: #ff8533;
 
-            /* Trading Colors */
-            --bull-green: #00d4aa;
-            --bull-green-bg: rgba(0, 212, 170, 0.1);
-            --bear-red: #f84960;
-            --bear-red-bg: rgba(248, 73, 96, 0.1);
-            --neutral-gray: #848e9c;
-
-            /* Dark Theme (Primary) */
-            --bg-primary: #0b0e11;
-            --bg-secondary: #161a1e;
-            --bg-tertiary: #1e2329;
-            --bg-quaternary: #2b3139;
-            --bg-hover: #2b3139;
-            --bg-active: #3c434b;
+            /* Terminal Colors */
+            --terminal-bg: #1a1a1a;
+            --terminal-surface: #2d2d2d;
+            --terminal-surface-light: #3a3a3a;
+            --terminal-surface-dark: #1f1f1f;
+            --terminal-border: #404040;
+            --terminal-border-light: #555555;
 
             /* Text Colors */
-            --text-primary: #f0f0f0;
-            --text-secondary: #b7bdc6;
-            --text-tertiary: #848e9c;
-            --text-quaternary: #5e6673;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-tertiary: #999999;
+            --text-muted: #666666;
+            --text-orange: var(--bloomberg-orange);
 
-            /* Border Colors */
-            --border-primary: #2b3139;
-            --border-secondary: #3c434b;
-            --border-tertiary: #474d57;
+            /* Data Colors */
+            --data-positive: #00ff88;
+            --data-negative: #ff4444;
+            --data-neutral: #ffaa00;
+            --data-bg-positive: rgba(0, 255, 136, 0.1);
+            --data-bg-negative: rgba(255, 68, 68, 0.1);
 
-            /* Professional Typography */
-            --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', monospace;
-
-            /* Font Sizes */
-            --text-xs: 0.75rem;
-            --text-sm: 0.875rem;
-            --text-base: 1rem;
-            --text-lg: 1.125rem;
-            --text-xl: 1.25rem;
-            --text-2xl: 1.5rem;
-            --text-3xl: 1.875rem;
-            --text-4xl: 2.25rem;
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'Roboto Mono', 'SF Mono', Monaco, monospace;
 
             /* Spacing */
-            --space-1: 0.25rem;
-            --space-2: 0.5rem;
-            --space-3: 0.75rem;
-            --space-4: 1rem;
-            --space-5: 1.25rem;
-            --space-6: 1.5rem;
-            --space-8: 2rem;
-            --space-10: 2.5rem;
-            --space-12: 3rem;
-            --space-16: 4rem;
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
 
             /* Border Radius */
-            --radius-sm: 0.25rem;
-            --radius-md: 0.375rem;
-            --radius-lg: 0.5rem;
-            --radius-xl: 0.75rem;
+            --radius-sm: 2px;
+            --radius-md: 4px;
+            --radius-lg: 6px;
 
             /* Shadows */
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
 
             /* Transitions */
-            --transition-fast: 0.15s ease-in-out;
-            --transition-normal: 0.2s ease-in-out;
-            --transition-slow: 0.3s ease-in-out;
-
-            /* Z-index */
-            --z-dropdown: 1000;
-            --z-sticky: 1020;
-            --z-fixed: 1030;
-            --z-modal: 1040;
-            --z-tooltip: 1050;
+            --transition: 0.2s ease-in-out;
         }
 
         /* Light Theme Override */
         [data-theme="light"] {
-            --bg-primary: #ffffff;
-            --bg-secondary: #fafafa;
-            --bg-tertiary: #f5f5f5;
-            --bg-quaternary: #eeeeee;
-            --bg-hover: #f5f5f5;
-            --bg-active: #eeeeee;
+            --terminal-bg: #ffffff;
+            --terminal-surface: #f5f5f5;
+            --terminal-surface-light: #e0e0e0;
+            --terminal-surface-dark: #eeeeee;
+            --terminal-border: #d0d0d0;
+            --terminal-border-light: #c0c0c0;
 
-            --text-primary: #181a20;
-            --text-secondary: #474d57;
-            --text-tertiary: #848e9c;
-            --text-quaternary: #b7bdc6;
-
-            --border-primary: #eeeeee;
-            --border-secondary: #e6e8ea;
-            --border-tertiary: #d1d5db;
+            --text-primary: #1a1a1a;
+            --text-secondary: #333333;
+            --text-tertiary: #666666;
+            --text-muted: #999999;
         }
 
-        /* ===== PROFESSIONAL RESET & BASE STYLES ===== */
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -127,370 +93,510 @@
         }
 
         html {
+            font-size: 14px;
             scroll-behavior: smooth;
-            font-size: 16px;
         }
 
         body {
             font-family: var(--font-primary);
-            font-size: var(--text-base);
-            line-height: 1.5;
+            background-color: var(--terminal-bg);
             color: var(--text-primary);
-            background-color: var(--bg-primary);
-            transition: background-color var(--transition-normal), color var(--transition-normal);
+            line-height: 1.4;
             overflow-x: hidden;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all var(--transition-fast);
-        }
-
-        button {
-            border: none;
-            background: none;
-            cursor: pointer;
-            font-family: inherit;
-            transition: all var(--transition-fast);
-        }
-
-        ul, ol {
-            list-style: none;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        /* ===== PROFESSIONAL LAYOUT SYSTEM ===== */
-        .container {
-            max-width: 1440px;
+        /* Terminal Layout System */
+        .terminal-container {
+            max-width: 1920px;
             margin: 0 auto;
-            padding: 0 var(--space-6);
+            padding: 0 var(--space-md);
         }
 
-        .container-fluid {
-            width: 100%;
-            padding: 0 var(--space-4);
-        }
-
-        /* Grid System */
-        .grid {
+        .terminal-grid {
             display: grid;
-            gap: var(--space-6);
+            gap: var(--space-sm);
         }
 
-        .grid-cols-1 { grid-template-columns: 1fr; }
-        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
-        .grid-cols-12 { grid-template-columns: repeat(12, 1fr); }
-
-        /* Flex System */
-        .flex { display: flex; }
-        .flex-col { flex-direction: column; }
-        .items-center { align-items: center; }
-        .justify-center { justify-content: center; }
-        .justify-between { justify-content: space-between; }
-        .justify-end { justify-content: flex-end; }
-        .gap-2 { gap: var(--space-2); }
-        .gap-4 { gap: var(--space-4); }
-        .gap-6 { gap: var(--space-6); }
-
-        /* ===== PROFESSIONAL COMPONENTS ===== */
-        .card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-primary);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            transition: all var(--transition-normal);
+        .terminal-panel {
+            background: var(--terminal-surface);
+            border: 1px solid var(--terminal-border);
+            border-radius: var(--radius-sm);
+            padding: var(--space-md);
         }
 
-        .card:hover {
-            border-color: var(--border-secondary);
-            box-shadow: var(--shadow-md);
-        }
-
-        .card-header {
-            padding-bottom: var(--space-4);
-            border-bottom: 1px solid var(--border-primary);
-            margin-bottom: var(--space-4);
-        }
-
-        .card-title {
-            font-size: var(--text-lg);
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        /* Professional Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-2);
-            padding: var(--space-3) var(--space-6);
-            font-size: var(--text-sm);
-            font-weight: 500;
-            border-radius: var(--radius-md);
-            transition: all var(--transition-fast);
-            cursor: pointer;
-            text-decoration: none;
-            border: 1px solid transparent;
-            white-space: nowrap;
-        }
-
-        .btn-primary {
-            background: var(--primary-brand);
-            color: var(--bg-primary);
-            border-color: var(--primary-brand);
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-brand-dark);
-            border-color: var(--primary-brand-dark);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            border-color: var(--border-secondary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--bg-hover);
-            border-color: var(--border-tertiary);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary-brand);
-            border-color: var(--primary-brand);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary-brand);
-            color: var(--bg-primary);
-        }
-
-        .btn-sm {
-            padding: var(--space-2) var(--space-4);
-            font-size: var(--text-xs);
-        }
-
-        .btn-lg {
-            padding: var(--space-4) var(--space-8);
-            font-size: var(--text-base);
-        }
-
-        /* ===== PROFESSIONAL HEADER & NAVIGATION ===== */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border-primary);
-            z-index: var(--z-fixed);
-            backdrop-filter: blur(10px);
-        }
-
-        .navbar {
+        .terminal-panel-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 64px;
-            padding: 0 var(--space-6);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--terminal-border);
+            margin-bottom: var(--space-md);
         }
 
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
-            font-size: var(--text-xl);
-            font-weight: 700;
-            color: var(--primary-brand);
-        }
-
-        .navbar-brand i {
-            font-size: var(--text-2xl);
-        }
-
-        .navbar-nav {
-            display: flex;
-            align-items: center;
-            gap: var(--space-8);
-        }
-
-        .nav-link {
-            color: var(--text-secondary);
-            font-weight: 500;
-            padding: var(--space-2) var(--space-4);
-            border-radius: var(--radius-md);
-            transition: all var(--transition-fast);
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--text-primary);
-            background: var(--bg-hover);
-        }
-
-        .navbar-controls {
-            display: flex;
-            align-items: center;
-            gap: var(--space-4);
-        }
-
-        /* Language & Theme Controls */
-        .control-group {
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-        }
-
-        .theme-toggle,
-        .lang-toggle {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-primary);
-            border-radius: var(--radius-md);
-            color: var(--text-secondary);
-            transition: all var(--transition-fast);
-        }
-
-        .theme-toggle:hover,
-        .lang-toggle:hover {
-            background: var(--bg-hover);
-            border-color: var(--border-secondary);
-            color: var(--text-primary);
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-toggle {
-            display: none;
-            width: 40px;
-            height: 40px;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-primary);
-            border-radius: var(--radius-md);
-            color: var(--text-secondary);
-        }
-
-        /* ===== PROFESSIONAL DATA DISPLAY ===== */
-        .price-ticker {
-            position: fixed;
-            top: 80px; /* Header height */
-            left: 0;
-            right: 0;
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border-primary);
-            padding: var(--space-3) 0;
-            overflow: hidden;
-            z-index: var(--z-sticky);
-        }
-
-        .ticker-scroll {
-            display: flex;
-            animation: scroll-ticker 60s linear infinite;
-            gap: var(--space-8);
-        }
-
-        @keyframes scroll-ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        .ticker-item {
-            display: flex;
-            align-items: center;
-            gap: var(--space-4);
-            white-space: nowrap;
+        .terminal-panel-title {
             font-family: var(--font-mono);
-            font-size: var(--text-sm);
-        }
-
-        .ticker-symbol {
+            font-size: 0.9rem;
             font-weight: 600;
-            color: var(--text-primary);
-            min-width: 60px;
-        }
-
-        .ticker-price {
-            font-weight: 500;
-            color: var(--text-primary);
-            min-width: 80px;
-        }
-
-        .ticker-change {
-            font-weight: 500;
-            padding: var(--space-1) var(--space-2);
-            border-radius: var(--radius-sm);
-            font-size: var(--text-xs);
-            min-width: 60px;
-            text-align: center;
-        }
-
-        .ticker-change.positive {
-            color: var(--bull-green);
-            background: var(--bull-green-bg);
-        }
-
-        .ticker-change.negative {
-            color: var(--bear-red);
-            background: var(--bear-red-bg);
-        }
-
-        /* Professional Tables */
-        .data-table {
-            width: 100%;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-primary);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-        }
-
-        .data-table th,
-        .data-table td {
-            padding: var(--space-4);
-            text-align: left;
-            border-bottom: 1px solid var(--border-primary);
-        }
-
-        .data-table th {
-            background: var(--bg-tertiary);
-            font-weight: 600;
-            color: var(--text-secondary);
-            font-size: var(--text-xs);
+            color: var(--text-orange);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        .data-table td {
+        /* Header Terminal Style */
+        .terminal-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--terminal-surface-dark);
+            border-bottom: 2px solid var(--bloomberg-orange);
+            z-index: 1000;
+            height: 60px;
+        }
+
+        .terminal-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            padding: 0 var(--space-lg);
+        }
+
+        .terminal-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
             font-family: var(--font-mono);
-            font-size: var(--text-sm);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--bloomberg-orange);
         }
 
-        .data-table tr:hover {
-            background: var(--bg-hover);
+        .terminal-brand-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--bloomberg-orange);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--terminal-bg);
+            font-size: 1rem;
         }
 
-        .data-table tr:last-child td {
+        .terminal-nav-links {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xl);
+        }
+
+        .terminal-nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .terminal-nav-link:hover,
+        .terminal-nav-link.active {
+            color: var(--bloomberg-orange);
+            background: rgba(255, 102, 0, 0.1);
+        }
+
+        .terminal-controls {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .terminal-control-btn {
+            width: 36px;
+            height: 36px;
+            background: var(--terminal-surface);
+            border: 1px solid var(--terminal-border);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .terminal-control-btn:hover {
+            background: var(--terminal-surface-light);
+            border-color: var(--bloomberg-orange);
+            color: var(--bloomberg-orange);
+        }
+
+        /* Main Content */
+        .terminal-main {
+            margin-top: 60px;
+            min-height: calc(100vh - 60px);
+            padding: var(--space-lg) 0;
+        }
+
+        /* Hero Terminal Section */
+        .terminal-hero {
+            padding: var(--space-2xl) 0;
+            background: linear-gradient(135deg, var(--terminal-bg) 0%, var(--terminal-surface-dark) 100%);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-family: var(--font-mono);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            line-height: 1.2;
+        }
+
+        .hero-title .highlight {
+            color: var(--bloomberg-orange);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-2xl);
+            line-height: 1.5;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
+        }
+
+        .hero-stat {
+            background: var(--terminal-surface);
+            border: 1px solid var(--terminal-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-family: var(--font-mono);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--bloomberg-orange);
+            display: block;
+            margin-bottom: var(--space-sm);
+        }
+
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Market Data Terminal */
+        .market-terminal {
+            padding: var(--space-2xl) 0;
+            background: var(--terminal-surface-dark);
+        }
+
+        .market-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .market-widget {
+            background: var(--terminal-surface);
+            border: 1px solid var(--terminal-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+        }
+
+        .market-widget-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-md);
+        }
+
+        .market-symbol {
+            font-family: var(--font-mono);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .market-change {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+        }
+
+        .market-change.positive {
+            color: var(--data-positive);
+            background: var(--data-bg-positive);
+        }
+
+        .market-change.negative {
+            color: var(--data-negative);
+            background: var(--data-bg-negative);
+        }
+
+        .market-price {
+            font-family: var(--font-mono);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .market-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+
+        .market-detail {
+            text-align: center;
+            padding: var(--space-sm);
+            background: var(--terminal-surface-dark);
+            border-radius: var(--radius-sm);
+        }
+
+        .market-detail-label {
+            font-size: 0.7rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            margin-bottom: var(--space-xs);
+        }
+
+        .market-detail-value {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Data Table Terminal Style */
+        .terminal-table {
+            background: var(--terminal-surface);
+            border: 1px solid var(--terminal-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .terminal-table-header {
+            background: var(--terminal-surface-dark);
+            padding: var(--space-md);
+            border-bottom: 1px solid var(--terminal-border);
+        }
+
+        .terminal-table-title {
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--bloomberg-orange);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .terminal-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .terminal-table th,
+        .terminal-table td {
+            padding: var(--space-md);
+            text-align: left;
+            border-bottom: 1px solid var(--terminal-border);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+
+        .terminal-table th {
+            background: var(--terminal-surface-dark);
+            color: var(--text-tertiary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.8rem;
+        }
+
+        .terminal-table td {
+            color: var(--text-primary);
+        }
+
+        .terminal-table tr:hover {
+            background: var(--terminal-surface-light);
+        }
+
+        .terminal-table tr:last-child td {
             border-bottom: none;
+        }
+
+        /* Trading Features Section */
+        .trading-features {
+            padding: var(--space-2xl) 0;
+            background: var(--terminal-bg);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .feature-card {
+            background: var(--terminal-surface);
+            border: 1px solid var(--terminal-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-xl);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            border-color: var(--bloomberg-orange);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bloomberg-orange);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+            font-size: 1.5rem;
+            color: var(--terminal-bg);
+        }
+
+        .feature-title {
+            font-family: var(--font-mono);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Terminal Footer */
+        .terminal-footer {
+            background: var(--terminal-surface-dark);
+            border-top: 2px solid var(--bloomberg-orange);
+            padding: var(--space-2xl) 0 var(--space-lg);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        .footer-section h3 {
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--bloomberg-orange);
+            margin-bottom: var(--space-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .footer-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-link:hover {
+            color: var(--bloomberg-orange);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--terminal-border);
+            padding-top: var(--space-lg);
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .terminal-nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .market-overview {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .terminal-container {
+                padding: 0 var(--space-sm);
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ===== PROFESSIONAL MAIN CONTENT ===== */
@@ -775,158 +881,76 @@
 
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1024px) {
-            .container {
-                padding: 0 var(--space-4);
+            .sidebar {
+                width: 40vw;
             }
 
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
+            .main-content {
+                width: 60vw;
+                margin-left: 40vw;
             }
 
-            .market-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            .hero-title {
+                font-size: var(--text-4xl);
             }
         }
 
         @media (max-width: 768px) {
-            .navbar {
-                padding: 0 var(--space-4);
+            .app-container {
+                flex-direction: column;
             }
 
-            .navbar-nav {
+            .sidebar {
+                width: 100vw;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid var(--border-primary);
+            }
+
+            .sidebar-market {
                 display: none;
             }
 
-            .mobile-menu-toggle {
-                display: flex;
+            .main-content {
+                width: 100vw;
+                margin-left: 0;
             }
 
             .hero-title {
                 font-size: var(--text-3xl);
             }
 
-            .hero-subtitle {
-                font-size: var(--text-lg);
-            }
-
-            .hero-stats {
+            .feature-grid {
                 grid-template-columns: 1fr;
-                gap: var(--space-4);
-            }
-
-            .market-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-6);
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: var(--space-6);
-            }
-
-            .ticker-item {
-                font-size: var(--text-xs);
-                gap: var(--space-2);
-            }
-
-            .ticker-symbol {
-                min-width: 40px;
-            }
-
-            .ticker-price {
-                min-width: 60px;
-            }
-
-            .ticker-change {
-                min-width: 50px;
             }
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 0 var(--space-3);
-            }
-
-            .navbar {
-                padding: 0 var(--space-3);
-            }
-
-            .hero-section {
-                padding: var(--space-12) 0 var(--space-8);
+            .content-section {
+                padding: var(--space-8) var(--space-4);
             }
 
             .hero-title {
                 font-size: var(--text-2xl);
             }
 
-            .section-title {
-                font-size: var(--text-2xl);
+            .hero-subtitle {
+                font-size: var(--text-base);
             }
 
-            .market-section,
-            .features-section {
-                padding: var(--space-12) 0;
-            }
-
-            .card {
+            .sidebar-brand {
                 padding: var(--space-4);
             }
 
-            .market-card {
+            .sidebar-nav {
                 padding: var(--space-4);
             }
 
-            .feature-card {
-                padding: var(--space-6);
+            .sidebar-controls {
+                padding: var(--space-4);
             }
         }
-
-        /* ===== UTILITY CLASSES ===== */
-        .text-center { text-align: center; }
-        .text-left { text-align: left; }
-        .text-right { text-align: right; }
-
-        .text-primary { color: var(--text-primary); }
-        .text-secondary { color: var(--text-secondary); }
-        .text-tertiary { color: var(--text-tertiary); }
-        .text-brand { color: var(--primary-brand); }
-        .text-bull { color: var(--bull-green); }
-        .text-bear { color: var(--bear-red); }
-
-        .bg-primary { background: var(--bg-primary); }
-        .bg-secondary { background: var(--bg-secondary); }
-        .bg-tertiary { background: var(--bg-tertiary); }
-
-        .border { border: 1px solid var(--border-primary); }
-        .border-secondary { border: 1px solid var(--border-secondary); }
-        .border-tertiary { border: 1px solid var(--border-tertiary); }
-
-        .rounded { border-radius: var(--radius-md); }
-        .rounded-lg { border-radius: var(--radius-lg); }
-        .rounded-xl { border-radius: var(--radius-xl); }
-
-        .shadow { box-shadow: var(--shadow-md); }
-        .shadow-lg { box-shadow: var(--shadow-lg); }
-
-        .transition { transition: all var(--transition-normal); }
-
-        /* Spacing utilities */
-        .p-2 { padding: var(--space-2); }
-        .p-4 { padding: var(--space-4); }
-        .p-6 { padding: var(--space-6); }
-        .p-8 { padding: var(--space-8); }
-
-        .m-2 { margin: var(--space-2); }
-        .m-4 { margin: var(--space-4); }
-        .m-6 { margin: var(--space-6); }
-        .m-8 { margin: var(--space-8); }
-
-        .mb-2 { margin-bottom: var(--space-2); }
-        .mb-4 { margin-bottom: var(--space-4); }
         .mb-6 { margin-bottom: var(--space-6); }
         .mb-8 { margin-bottom: var(--space-8); }
 
@@ -938,114 +962,105 @@
     </style>
 </head>
 <body>
-    <!-- Professional Header -->
-    <header class="header" id="header">
-        <nav class="navbar">
-            <div class="navbar-brand">
-                <i class="fas fa-chart-line"></i>
-                <span>BTDUex</span>
-            </div>
-
-            <div class="navbar-nav" id="navbar-nav">
-                <a href="#home" class="nav-link active" data-key="nav-home">Home</a>
-                <a href="#markets" class="nav-link" data-key="nav-markets">Markets</a>
-                <a href="#about" class="nav-link" data-key="nav-about">About</a>
-            </div>
-
-            <div class="navbar-controls">
-                <div class="control-group">
-                    <button class="lang-toggle" id="lang-toggle" title="Language">
-                        <i class="fas fa-globe"></i>
-                    </button>
-                    <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
+    <!-- Terminal Header -->
+    <header class="terminal-header">
+        <nav class="terminal-nav">
+            <div class="terminal-brand">
+                <div class="terminal-brand-icon">
+                    <i class="fas fa-chart-bar"></i>
                 </div>
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span>BTDUEX</span>
+            </div>
+
+            <div class="terminal-nav-links">
+                <a href="#home" class="terminal-nav-link active">Terminal</a>
+                <a href="#markets" class="terminal-nav-link">Markets</a>
+                <a href="#trading" class="terminal-nav-link">Spot Trading</a>
+                <a href="#about" class="terminal-nav-link">Platform</a>
+            </div>
+
+            <div class="terminal-controls">
+                <button class="terminal-control-btn" id="theme-toggle" title="Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="terminal-control-btn" id="lang-toggle" title="Language">
+                    <i class="fas fa-globe"></i>
+                </button>
+                <button class="terminal-control-btn" id="menu-toggle" title="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </nav>
     </header>
 
-    <!-- Price Ticker -->
-    <div class="price-ticker" id="price-ticker">
-        <div class="ticker-scroll" id="ticker-scroll">
-            <!-- Dynamic ticker content will be inserted here -->
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Professional Hero Section -->
-        <section class="hero-section" id="home">
-            <div class="container">
+    <!-- Main Terminal Content -->
+    <main class="terminal-main">
+        <!-- Hero Terminal Section -->
+        <section class="terminal-hero" id="home">
+            <div class="terminal-container">
                 <div class="hero-content">
-                    <h1 class="hero-title" data-key="hero-title">
-                        Professional Digital Asset Trading Platform
+                    <h1 class="hero-title">
+                        Professional <span class="highlight">Trading Terminal</span><br>
+                        For Digital Assets
                     </h1>
-                    <p class="hero-subtitle" data-key="hero-description">
-                        BTDUex provides institutional-grade cryptocurrency trading services, supporting various mainstream digital assets for secure and efficient trading experience
+                    <p class="hero-subtitle">
+                        BTDUEX delivers institutional-grade cryptocurrency spot trading with real-time market data,
+                        advanced analytics, and professional-grade execution capabilities.
                     </p>
 
-
-
-                    <!-- Professional Platform Stats -->
                     <div class="hero-stats">
-                        <div class="stat-card">
-                            <span class="stat-number" data-key="stat-users">500K+</span>
-                            <span class="stat-label" data-key="stat-users-label">Global Users</span>
+                        <div class="hero-stat">
+                            <span class="hero-stat-value">$2.8B</span>
+                            <span class="hero-stat-label">Daily Volume</span>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-key="stat-volume">$2.5B</span>
-                            <span class="stat-label" data-key="stat-volume-label">Daily Volume</span>
+                        <div class="hero-stat">
+                            <span class="hero-stat-value">750K+</span>
+                            <span class="hero-stat-label">Active Traders</span>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-key="stat-coins">200+</span>
-                            <span class="stat-label" data-key="stat-coins-label">Supported Coins</span>
+                        <div class="hero-stat">
+                            <span class="hero-stat-value">150+</span>
+                            <span class="hero-stat-label">Trading Pairs</span>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-number">99.9%</span>
-                            <span class="stat-label" data-key="stat-uptime">System Uptime</span>
+                        <div class="hero-stat">
+                            <span class="hero-stat-value">99.98%</span>
+                            <span class="hero-stat-label">Uptime</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Professional Market Data Section -->
-        <section class="market-section" id="markets">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title" data-key="market-title">Real-time Market Data</h2>
-                    <p class="section-subtitle" data-key="market-subtitle">
-                        Track mainstream cryptocurrency price movements in real-time and stay informed about market dynamics
-                    </p>
-                </div>
-
-                <!-- Professional Market Grid -->
-                <div class="market-grid" id="market-grid">
-                    <!-- Dynamic content will be inserted here -->
-                </div>
-
-                <!-- Professional Data Table -->
-                <div class="card mt-8">
-                    <div class="card-header">
-                        <h3 class="card-title" data-key="market-table-title">Market Overview</h3>
+        <!-- Market Data Terminal -->
+        <section class="market-terminal" id="markets">
+            <div class="terminal-container">
+                <div class="terminal-panel">
+                    <div class="terminal-panel-header">
+                        <h2 class="terminal-panel-title" data-key="real-time-market-data">Real-Time Market Data</h2>
+                        <div style="color: var(--text-tertiary); font-size: 0.8rem;">
+                            <i class="fas fa-circle" style="color: var(--data-positive); margin-right: 0.5rem;"></i>
+                            <span data-key="live-feed-active">Live Feed Active</span>
+                        </div>
                     </div>
-                    <div style="overflow-x: auto;">
-                        <table class="data-table" id="market-table">
+
+                    <div class="market-overview" id="market-overview">
+                        <!-- Market widgets will be populated by JavaScript -->
+                    </div>
+
+                    <div class="terminal-table">
+                        <div class="terminal-table-header">
+                            <h3 class="terminal-table-title" data-key="market-overview">Market Overview</h3>
+                        </div>
+                        <table>
                             <thead>
                                 <tr>
-                                    <th data-key="table-name">Name</th>
-                                    <th data-key="table-price">Price</th>
-                                    <th data-key="table-change">24h Change</th>
-                                    <th data-key="table-volume">24h Volume</th>
-                                    <th data-key="table-market-cap">Market Cap</th>
+                                    <th data-key="asset">Asset</th>
+                                    <th data-key="price-usd">Price (USD)</th>
+                                    <th data-key="24h-change">24h Change</th>
+                                    <th data-key="24h-volume">24h Volume</th>
+                                    <th data-key="market-cap">Market Cap</th>
                                 </tr>
                             </thead>
                             <tbody id="market-table-body">
-                                <!-- Dynamic content will be inserted here -->
+                                <!-- Market data will be populated by JavaScript -->
                             </tbody>
                         </table>
                     </div>
@@ -1053,116 +1068,57 @@
             </div>
         </section>
 
-        <!-- Professional Features Section -->
-        <section class="features-section" id="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title" data-key="features-title">Platform Advantages</h2>
-                    <p class="section-subtitle" data-key="features-subtitle">
-                        Professional-grade trading platform providing secure and efficient digital asset trading services
-                    </p>
-                </div>
-
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="feature-title" data-key="feature-security-title">Institutional Security</h3>
-                        <p class="feature-description" data-key="feature-security-desc">
-                            Bank-level security technology with cold/hot wallet separation and multi-signature protection for your assets
-                        </p>
+        <!-- Trading Features Section -->
+        <section class="trading-features" id="trading">
+            <div class="terminal-container">
+                <div class="terminal-panel">
+                    <div class="terminal-panel-header">
+                        <h2 class="terminal-panel-title" data-key="professional-trading-features">Professional Trading Features</h2>
                     </div>
 
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="feature-title" data-key="institutional-security">Institutional Security</h3>
+                            <p class="feature-description" data-key="institutional-security-desc">
+                                Bank-grade security infrastructure with cold storage, multi-signature wallets,
+                                and advanced encryption protecting your digital assets.
+                            </p>
                         </div>
-                        <h3 class="feature-title" data-key="feature-trading-title">Professional Trading Tools</h3>
-                        <p class="feature-description" data-key="feature-trading-desc">
-                            Professional candlestick charts and technical indicator analysis to meet different levels of trader needs
-                        </p>
-                    </div>
 
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-tachometer-alt"></i>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="feature-title" data-key="advanced-analytics">Advanced Analytics</h3>
+                            <p class="feature-description" data-key="advanced-analytics-desc">
+                                Professional trading tools with real-time charts, technical indicators,
+                                and market depth analysis for informed decision making.
+                            </p>
                         </div>
-                        <h3 class="feature-title" data-key="feature-speed-title">Ultra-fast Matching</h3>
-                        <p class="feature-description" data-key="feature-speed-desc">
-                            Millisecond-level matching engine ensures rapid order execution without missing any trading opportunities
-                        </p>
-                    </div>
 
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-headset"></i>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3 class="feature-title" data-key="ultra-fast-execution">Ultra-Fast Execution</h3>
+                            <p class="feature-description" data-key="ultra-fast-execution-desc">
+                                High-performance matching engine with sub-millisecond latency
+                                ensuring optimal order execution and minimal slippage.
+                            </p>
                         </div>
-                        <h3 class="feature-title" data-key="feature-support-title">24/7 Professional Support</h3>
-                        <p class="feature-description" data-key="feature-support-desc">
-                            Round-the-clock multilingual professional customer service team ready to solve your trading issues
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Professional News Section -->
-        <section class="market-section" id="news">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title" data-key="news-title">Market News</h2>
-                    <p class="section-subtitle" data-key="news-subtitle">
-                        Stay informed about the latest market dynamics and industry trends
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-3 gap-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <span class="text-brand text-xs font-weight-600" data-key="news-market">Market News</span>
-                        </div>
-                        <h3 class="text-lg font-weight-600 mb-4" data-key="news-1-title">
-                            Bitcoin Breaks $120,000 Setting New All-Time High
-                        </h3>
-                        <p class="text-secondary mb-4" data-key="news-1-excerpt">
-                            In July 2025, Bitcoin writes history again by breaking through the $120,000 milestone, with extremely optimistic market sentiment...
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-tertiary text-sm">2025-07-28</span>
-                            <a href="#" class="text-brand text-sm" data-key="read-more">Read More →</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <span class="text-brand text-xs font-weight-600" data-key="news-policy">Policy Updates</span>
-                        </div>
-                        <h3 class="text-lg font-weight-600 mb-4" data-key="news-2-title">
-                            Trump Administration Establishes Crypto Strategic Reserve
-                        </h3>
-                        <p class="text-secondary mb-4" data-key="news-2-excerpt">
-                            President Trump announces the creation of a national cryptocurrency strategic reserve, initially including Bitcoin, Ethereum and other major digital assets...
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-tertiary text-sm">2025-07-26</span>
-                            <a href="#" class="text-brand text-sm" data-key="read-more">Read More →</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <span class="text-brand text-xs font-weight-600" data-key="news-market">Market News</span>
-                        </div>
-                        <h3 class="text-lg font-weight-600 mb-4" data-key="news-3-title">
-                            Ethereum Spot Trading Volume Surpasses Bitcoin for First Time
-                        </h3>
-                        <p class="text-secondary mb-4" data-key="news-3-excerpt">
-                            CryptoQuant data shows that for the first time in over a year, Ethereum spot trading volume exceeds Bitcoin, indicating changing market dynamics...
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-tertiary text-sm">2025-07-24</span>
-                            <a href="#" class="text-brand text-sm" data-key="read-more">Read More →</a>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3 class="feature-title" data-key="24-7-support">24/7 Support</h3>
+                            <p class="feature-description" data-key="24-7-support-desc">
+                                Round-the-clock professional support team with deep market expertise
+                                ready to assist with your trading needs.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1170,200 +1126,161 @@
         </section>
     </main>
 
-    <!-- Professional Footer -->
-    <footer class="footer">
-        <div class="container">
+    <!-- Terminal Footer -->
+    <footer class="terminal-footer" id="about">
+        <div class="terminal-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>BTDUex</h3>
-                    <p data-key="footer-description">
-                        Professional digital asset trading platform providing institutional-grade cryptocurrency trading services to global users.
+                    <h3>BTDUEX</h3>
+                    <p>
+                        Professional cryptocurrency trading terminal providing institutional-grade
+                        spot trading services with advanced analytics and real-time market data.
                     </p>
-
                 </div>
 
                 <div class="footer-section">
-                    <h3 data-key="footer-trading">Trading Services</h3>
+                    <h3 data-key="trading-services">Trading Services</h3>
                     <div class="footer-links">
-                        <a href="#" class="footer-link" data-key="footer-spot">Spot Trading</a>
-                        <a href="#" class="footer-link" data-key="footer-futures">Futures Trading</a>
-                        <a href="#" class="footer-link" data-key="footer-margin">Margin Trading</a>
-                        <a href="#" class="footer-link" data-key="footer-staking">Staking Services</a>
-                        <a href="#" class="footer-link" data-key="footer-earn">Earn Products</a>
+                        <a href="#" class="footer-link" data-key="spot-trading-link">Spot Trading</a>
+                        <a href="#" class="footer-link" data-key="market-data">Market Data</a>
+                        <a href="#" class="footer-link" data-key="trading-tools">Trading Tools</a>
+                        <a href="#" class="footer-link" data-key="api-access">API Access</a>
                     </div>
                 </div>
 
                 <div class="footer-section">
-                    <h3 data-key="footer-support">Support Services</h3>
+                    <h3 data-key="platform">Platform</h3>
                     <div class="footer-links">
-                        <a href="#" class="footer-link" data-key="footer-help">Help Center</a>
-                        <a href="#" class="footer-link" data-key="footer-api">API Docs</a>
-                        <a href="#" class="footer-link" data-key="footer-fees">Fee Schedule</a>
-                        <a href="#" class="footer-link" data-key="footer-security">Security Center</a>
-                        <a href="#" class="footer-link" data-key="footer-contact">Contact Support</a>
+                        <a href="#" class="footer-link" data-key="security">Security</a>
+                        <a href="#" class="footer-link" data-key="fees">Fees</a>
+                        <a href="#" class="footer-link" data-key="support">Support</a>
+                        <a href="#" class="footer-link" data-key="documentation">Documentation</a>
                     </div>
                 </div>
 
                 <div class="footer-section">
-                    <h3 data-key="footer-company">Company Info</h3>
+                    <h3>Company</h3>
                     <div class="footer-links">
-                        <a href="#" class="footer-link" data-key="footer-about">About Us</a>
-                        <a href="#" class="footer-link" data-key="footer-careers">Careers</a>
-                        <a href="#" class="footer-link" data-key="footer-news">News Center</a>
-                        <a href="#" class="footer-link" data-key="footer-legal">Legal</a>
-                        <a href="#" class="footer-link" data-key="footer-privacy">Privacy Policy</a>
+                        <a href="#" class="footer-link" data-key="about-us">About Us</a>
+                        <a href="#" class="footer-link" data-key="careers">Careers</a>
+                        <a href="#" class="footer-link" data-key="legal">Legal</a>
+                        <a href="#" class="footer-link" data-key="privacy-policy">Privacy Policy</a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p data-key="footer-rights">
-                    &copy; 2025 BTDUex INC.All Rights Reserved
-                </p>
+                <p data-key="copyright">&copy; 2025 BTDUEX PTY LTD. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
+
+
     <script>
-        // Professional Trading Platform JavaScript
+        // Bloomberg Terminal Style JavaScript
+
+        // Translations
         const translations = {
             'zh-TW': {
-                'nav-home': '首頁',
-                'nav-markets': '市場',
-                'nav-about': '關於我們',
-                'hero-title': '專業數位資產交易平台',
-                'hero-description': 'BTDUex 提供機構級加密貨幣交易服務，支援多種主流數位資產，為全球用戶提供安全、高效的交易體驗',
-                'market-title': '即時市場行情',
-                'market-subtitle': '實時追蹤主流加密貨幣價格變動，掌握市場動態',
-                'market-table-title': '市場概覽',
-                'table-name': '名稱',
-                'table-price': '價格',
-                'table-change': '24h變化',
-                'table-volume': '24h成交量',
-                'table-market-cap': '市值',
-                'features-title': '平台優勢',
-                'features-subtitle': '專業級交易平台，為您提供安全、高效的數位資產交易服務',
-                'feature-security-title': '機構級安全',
-                'feature-security-desc': '採用銀行級安全技術，冷熱錢包分離，多重簽名保護您的資產安全',
-                'feature-trading-title': '專業交易工具',
-                'feature-trading-desc': '提供專業K線圖表、技術指標分析，滿足不同層級交易者需求',
-                'feature-speed-title': '極速撮合',
-                'feature-speed-desc': '毫秒級撮合引擎，確保訂單快速執行，不錯過任何交易機會',
-                'feature-support-title': '24/7 專業客服',
-                'feature-support-desc': '全天候多語言專業客服團隊，隨時為您解決交易問題',
-                'news-title': '市場資訊',
-                'news-subtitle': '掌握最新市場動態，洞察行業趨勢',
-                'news-market': '市場動態',
-                'news-policy': '政策動態',
-                'news-1-title': '比特幣突破12萬美元創歷史新高',
-                'news-1-excerpt': '2025年7月，比特幣再次寫下歷史新高，突破12萬美元整數關口，市場情緒極度樂觀...',
-                'news-2-title': '特朗普政府建立加密貨幣戰略儲備',
-                'news-2-excerpt': '美國總統特朗普宣布建立國家級加密貨幣戰略儲備，首批納入比特幣、以太坊等主流數字資產...',
-                'news-3-title': '以太坊現貨交易量首次超越比特幣',
-                'news-3-excerpt': 'CryptoQuant數據顯示，一年多來首次，以太坊現貨交易量超過比特幣，顯示市場結構正在發生變化...',
-                'footer-description': '專業的數位資產交易平台，為全球用戶提供機構級加密貨幣交易服務。',
-                'footer-trading': '交易服務',
-                'footer-support': '支援服務',
-                'footer-company': '公司資訊',
-                'footer-about': '關於我們',
-                'footer-careers': '人才招募',
-                'footer-news': '新聞中心',
-                'footer-legal': '法律聲明',
-                'footer-privacy': '隱私政策',
-                'footer-spot': '現貨交易',
-                'footer-futures': '合約交易',
-                'footer-margin': '槓桿交易',
-                'footer-staking': '質押服務',
-                'footer-earn': '理財產品',
-                'footer-help': '幫助中心',
-                'footer-api': 'API 文檔',
-                'footer-fees': '費率說明',
-                'footer-security': '安全中心',
-                'footer-contact': '聯絡客服',
-                'footer-rights': '© 2025 BTDUex INC.版權所有',
-                'read-more': '閱讀更多 →',
-                'stat-users': '500K+',
-                'stat-users-label': '全球用戶',
-                'stat-volume': '$2.5B',
-                'stat-volume-label': '日交易量',
-                'stat-coins': '200+',
-                'stat-coins-label': '支援幣種',
-                'stat-uptime': '系統穩定性'
+                'terminal': '終端',
+                'markets': '市場',
+                'spot-trading': '現貨交易',
+                'platform': '平台',
+                'professional-trading-terminal': '專業交易終端',
+                'for-digital-assets': '數位資產',
+                'hero-description': 'BTDUEX 提供機構級加密貨幣現貨交易，具備即時市場數據、進階分析和專業級執行能力。',
+                'daily-volume': '日交易量',
+                'active-traders': '活躍交易員',
+                'trading-pairs': '交易對',
+                'uptime': '運行時間',
+                'real-time-market-data': '即時市場數據',
+                'live-feed-active': '即時數據啟用',
+                'market-overview': '市場概覽',
+                'asset': '資產',
+                'price-usd': '價格 (USD)',
+                '24h-change': '24小時變化',
+                '24h-volume': '24小時成交量',
+                'market-cap': '市值',
+                'professional-trading-features': '專業交易功能',
+                'institutional-security': '機構級安全',
+                'institutional-security-desc': '銀行級安全基礎設施，冷存儲、多重簽名錢包和先進加密技術保護您的數位資產。',
+                'advanced-analytics': '進階分析',
+                'advanced-analytics-desc': '專業交易工具，具備即時圖表、技術指標和市場深度分析，助您做出明智決策。',
+                'ultra-fast-execution': '超快執行',
+                'ultra-fast-execution-desc': '高性能撮合引擎，亞毫秒延遲確保最佳訂單執行和最小滑點。',
+                '24-7-support': '24/7 支援',
+                '24-7-support-desc': '全天候專業支援團隊，具備深度市場專業知識，隨時協助您的交易需求。',
+                'trading-services': '交易服務',
+                'spot-trading-link': '現貨交易',
+                'market-data': '市場數據',
+                'trading-tools': '交易工具',
+                'api-access': 'API 存取',
+                'security': '安全',
+                'fees': '費用',
+                'support': '支援',
+                'documentation': '文檔',
+                'about-us': '關於我們',
+                'careers': '職業',
+                'legal': '法律',
+                'privacy-policy': '隱私政策',
+                'copyright': '© 2025 BTDUEX PTY LTD. 版權所有。'
             },
             'en': {
-                'nav-home': 'Home',
-                'nav-markets': 'Markets',
-                'nav-about': 'About',
-                'hero-title': 'Professional Digital Asset Trading Platform',
-                'hero-description': 'BTDUex provides institutional-grade cryptocurrency trading services, supporting various mainstream digital assets for secure and efficient trading experience',
-                'market-title': 'Real-time Market Data',
-                'market-subtitle': 'Track mainstream cryptocurrency price movements in real-time and stay informed about market dynamics',
-                'market-table-title': 'Market Overview',
-                'table-name': 'Name',
-                'table-price': 'Price',
-                'table-change': '24h Change',
-                'table-volume': '24h Volume',
-                'table-market-cap': 'Market Cap',
-                'features-title': 'Platform Advantages',
-                'features-subtitle': 'Professional-grade trading platform providing secure and efficient digital asset trading services',
-                'feature-security-title': 'Institutional Security',
-                'feature-security-desc': 'Bank-level security technology with cold/hot wallet separation and multi-signature protection for your assets',
-                'feature-trading-title': 'Professional Trading Tools',
-                'feature-trading-desc': 'Professional candlestick charts and technical indicator analysis to meet different levels of trader needs',
-                'feature-speed-title': 'Ultra-fast Matching',
-                'feature-speed-desc': 'Millisecond-level matching engine ensures rapid order execution without missing any trading opportunities',
-                'feature-support-title': '24/7 Professional Support',
-                'feature-support-desc': 'Round-the-clock multilingual professional customer service team ready to solve your trading issues',
-                'news-title': 'Market News',
-                'news-subtitle': 'Stay informed about the latest market dynamics and industry trends',
-                'news-market': 'Market News',
-                'news-policy': 'Policy Updates',
-                'news-1-title': 'Bitcoin Breaks $120,000 Setting New All-Time High',
-                'news-1-excerpt': 'In July 2025, Bitcoin writes history again by breaking through the $120,000 milestone, with extremely optimistic market sentiment...',
-                'news-2-title': 'Trump Administration Establishes Crypto Strategic Reserve',
-                'news-2-excerpt': 'President Trump announces the creation of a national cryptocurrency strategic reserve, initially including Bitcoin, Ethereum and other major digital assets...',
-                'news-3-title': 'Ethereum Spot Trading Volume Surpasses Bitcoin for First Time',
-                'news-3-excerpt': 'CryptoQuant data shows that for the first time in over a year, Ethereum spot trading volume exceeds Bitcoin, indicating changing market dynamics...',
-                'footer-description': 'Professional digital asset trading platform providing institutional-grade cryptocurrency trading services to global users.',
-                'footer-trading': 'Trading Services',
-                'footer-support': 'Support Services',
-                'footer-company': 'Company Info',
-                'footer-about': 'About Us',
-                'footer-careers': 'Careers',
-                'footer-news': 'News Center',
-                'footer-legal': 'Legal',
-                'footer-privacy': 'Privacy Policy',
-                'footer-spot': 'Spot Trading',
-                'footer-futures': 'Futures Trading',
-                'footer-margin': 'Margin Trading',
-                'footer-staking': 'Staking Services',
-                'footer-earn': 'Earn Products',
-                'footer-help': 'Help Center',
-                'footer-api': 'API Docs',
-                'footer-fees': 'Fee Schedule',
-                'footer-security': 'Security Center',
-                'footer-contact': 'Contact Support',
-                'footer-rights': '© 2025 BTDUex INC.All Rights Reserved',
-                'read-more': 'Read More →',
-                'stat-users': '500K+',
-                'stat-users-label': 'Global Users',
-                'stat-volume': '$2.5B',
-                'stat-volume-label': 'Daily Volume',
-                'stat-coins': '200+',
-                'stat-coins-label': 'Supported Coins',
-                'stat-uptime': 'System Uptime'
+                'terminal': 'Terminal',
+                'markets': 'Markets',
+                'spot-trading': 'Spot Trading',
+                'platform': 'Platform',
+                'professional-trading-terminal': 'Professional Trading Terminal',
+                'for-digital-assets': 'For Digital Assets',
+                'hero-description': 'BTDUEX delivers institutional-grade cryptocurrency spot trading with real-time market data, advanced analytics, and professional-grade execution capabilities.',
+                'daily-volume': 'Daily Volume',
+                'active-traders': 'Active Traders',
+                'trading-pairs': 'Trading Pairs',
+                'uptime': 'Uptime',
+                'real-time-market-data': 'Real-Time Market Data',
+                'live-feed-active': 'Live Feed Active',
+                'market-overview': 'Market Overview',
+                'asset': 'Asset',
+                'price-usd': 'Price (USD)',
+                '24h-change': '24h Change',
+                '24h-volume': '24h Volume',
+                'market-cap': 'Market Cap',
+                'professional-trading-features': 'Professional Trading Features',
+                'institutional-security': 'Institutional Security',
+                'institutional-security-desc': 'Bank-grade security infrastructure with cold storage, multi-signature wallets, and advanced encryption protecting your digital assets.',
+                'advanced-analytics': 'Advanced Analytics',
+                'advanced-analytics-desc': 'Professional trading tools with real-time charts, technical indicators, and market depth analysis for informed decision making.',
+                'ultra-fast-execution': 'Ultra-Fast Execution',
+                'ultra-fast-execution-desc': 'High-performance matching engine with sub-millisecond latency ensuring optimal order execution and minimal slippage.',
+                '24-7-support': '24/7 Support',
+                '24-7-support-desc': 'Round-the-clock professional support team with deep market expertise ready to assist with your trading needs.',
+                'trading-services': 'Trading Services',
+                'spot-trading-link': 'Spot Trading',
+                'market-data': 'Market Data',
+                'trading-tools': 'Trading Tools',
+                'api-access': 'API Access',
+                'security': 'Security',
+                'fees': 'Fees',
+                'support': 'Support',
+                'documentation': 'Documentation',
+                'about-us': 'About Us',
+                'careers': 'Careers',
+                'legal': 'Legal',
+                'privacy-policy': 'Privacy Policy',
+                'copyright': '© 2025 BTDUEX PTY LTD. All Rights Reserved.'
             }
         };
 
-        // Professional Trading Platform Variables
+        // Global variables
         let currentLang = localStorage.getItem('language') || 'en';
         let currentTheme = localStorage.getItem('theme') || 'dark';
         let marketData = {};
         let lastUpdateTime = 0;
         const UPDATE_INTERVAL = 30000; // 30 seconds
 
-        // Professional cryptocurrency list
-        const cryptoList = [
+        // Cryptocurrency list for terminal
+        const cryptoAssets = [
             { id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin' },
             { id: 'ethereum', symbol: 'ETH', name: 'Ethereum' },
             { id: 'binancecoin', symbol: 'BNB', name: 'BNB' },
@@ -1371,30 +1288,39 @@
             { id: 'cardano', symbol: 'ADA', name: 'Cardano' },
             { id: 'solana', symbol: 'SOL', name: 'Solana' },
             { id: 'dogecoin', symbol: 'DOGE', name: 'Dogecoin' },
-            { id: 'tether', symbol: 'USDT', name: 'Tether' },
-            { id: 'usd-coin', symbol: 'USDC', name: 'USD Coin' },
             { id: 'polygon', symbol: 'MATIC', name: 'Polygon' },
             { id: 'avalanche-2', symbol: 'AVAX', name: 'Avalanche' },
             { id: 'polkadot', symbol: 'DOT', name: 'Polkadot' }
         ];
 
-        // Professional initialization
+        // Initialize terminal
         document.addEventListener('DOMContentLoaded', function() {
+            initializeTerminal();
             initializeTheme();
             initializeLanguage();
             initializeNavigation();
             initializeMarketData();
-            initializeTicker();
             initializeScrollEffects();
-            initializePerformanceOptimizations();
         });
 
-        // Professional Theme functionality
+        // Terminal initialization
+        function initializeTerminal() {
+            // Set default theme to dark
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            // Initialize mock data immediately for better UX
+            if (Object.keys(marketData).length === 0) {
+                useMockData();
+            }
+
+            // Terminal branding
+            console.log('%c📊 BTDUEX Professional Trading Terminal', 'color: #ff6600; font-size: 16px; font-weight: bold;');
+            console.log('%cInstitutional-grade cryptocurrency trading platform', 'color: #cccccc; font-size: 14px;');
+        }
+
+        // Theme functionality
         function initializeTheme() {
             const themeToggle = document.getElementById('theme-toggle');
-
-            // Set initial theme (default to dark for professional look)
-            document.documentElement.setAttribute('data-theme', currentTheme);
             updateThemeIcon(currentTheme);
 
             themeToggle.addEventListener('click', function() {
@@ -1402,12 +1328,6 @@
                 document.documentElement.setAttribute('data-theme', currentTheme);
                 localStorage.setItem('theme', currentTheme);
                 updateThemeIcon(currentTheme);
-
-                // Smooth transition
-                document.body.style.transition = 'all 0.2s ease';
-                setTimeout(() => {
-                    document.body.style.transition = '';
-                }, 200);
             });
         }
 
@@ -1416,7 +1336,7 @@
             icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
 
-        // Professional Language functionality
+        // Language functionality
         function initializeLanguage() {
             updateLanguage(currentLang);
 
@@ -1437,24 +1357,43 @@
                 }
             });
 
+            // Update specific elements that don't use data-key
+            const heroTitle = document.querySelector('.hero-title');
+            if (heroTitle) {
+                heroTitle.innerHTML = lang === 'zh-TW' ?
+                    '專業 <span class="highlight">交易終端</span><br>數位資產' :
+                    'Professional <span class="highlight">Trading Terminal</span><br>For Digital Assets';
+            }
+
+            const heroSubtitle = document.querySelector('.hero-subtitle');
+            if (heroSubtitle) {
+                heroSubtitle.textContent = translations[lang]['hero-description'];
+            }
+
+            // Update navigation links
+            const navLinks = document.querySelectorAll('.terminal-nav-link');
+            const navTexts = ['terminal', 'markets', 'spot-trading', 'platform'];
+            navLinks.forEach((link, index) => {
+                if (translations[lang][navTexts[index]]) {
+                    link.textContent = translations[lang][navTexts[index]];
+                }
+            });
+
+            // Update stats labels
+            const statLabels = document.querySelectorAll('.hero-stat-label');
+            const statKeys = ['daily-volume', 'active-traders', 'trading-pairs', 'uptime'];
+            statLabels.forEach((label, index) => {
+                if (translations[lang][statKeys[index]]) {
+                    label.textContent = translations[lang][statKeys[index]];
+                }
+            });
+
             document.documentElement.lang = lang;
         }
 
-        // Professional Navigation functionality
+        // Navigation functionality
         function initializeNavigation() {
-            const mobileToggle = document.getElementById('mobile-menu-toggle');
-            const navbarNav = document.getElementById('navbar-nav');
-
-            if (mobileToggle) {
-                mobileToggle.addEventListener('click', function() {
-                    navbarNav.classList.toggle('show');
-                    const icon = this.querySelector('i');
-                    icon.className = navbarNav.classList.contains('show') ? 'fas fa-times' : 'fas fa-bars';
-                });
-            }
-
-            // Active link highlighting
-            const navLinks = document.querySelectorAll('.nav-link');
+            const navLinks = document.querySelectorAll('.terminal-nav-link');
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1470,18 +1409,10 @@
                     if (targetElement) {
                         targetElement.scrollIntoView({ behavior: 'smooth' });
                     }
-
-                    // Close mobile menu
-                    if (navbarNav.classList.contains('show')) {
-                        navbarNav.classList.remove('show');
-                        const icon = mobileToggle.querySelector('i');
-                        icon.className = 'fas fa-bars';
-                    }
                 });
             });
         }
-
-        // Professional Market data functionality
+        // Market data functionality
         function initializeMarketData() {
             fetchMarketData();
             setInterval(fetchMarketData, UPDATE_INTERVAL);
@@ -1494,7 +1425,7 @@
                     return;
                 }
 
-                const ids = cryptoList.map(crypto => crypto.id).join(',');
+                const ids = cryptoAssets.map(crypto => crypto.id).join(',');
                 const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_change=true&include_market_cap=true&include_24hr_vol=true`);
 
                 if (!response.ok) {
@@ -1505,7 +1436,7 @@
                 marketData = data;
                 lastUpdateTime = now;
 
-                updateMarketCards();
+                updateMarketWidgets();
                 updateMarketTable();
             } catch (error) {
                 console.error('Error fetching market data:', error);
@@ -1520,77 +1451,44 @@
                 'binancecoin': { usd: 680, usd_24h_change: -0.5, usd_market_cap: 98000000000, usd_24h_vol: 3200000000 },
                 'ripple': { usd: 1.25, usd_24h_change: 3.2, usd_market_cap: 70000000000, usd_24h_vol: 2800000000 },
                 'cardano': { usd: 0.85, usd_24h_change: -1.2, usd_market_cap: 30000000000, usd_24h_vol: 1200000000 },
-                'solana': { usd: 180, usd_24h_change: 4.1, usd_market_cap: 85000000000, usd_24h_vol: 4500000000 }
+                'solana': { usd: 180, usd_24h_change: 4.1, usd_market_cap: 85000000000, usd_24h_vol: 4500000000 },
+                'dogecoin': { usd: 0.32, usd_24h_change: -2.1, usd_market_cap: 45000000000, usd_24h_vol: 1800000000 },
+                'polygon': { usd: 1.15, usd_24h_change: 0.8, usd_market_cap: 11000000000, usd_24h_vol: 850000000 },
+                'avalanche-2': { usd: 42, usd_24h_change: 1.5, usd_market_cap: 16000000000, usd_24h_vol: 950000000 },
+                'polkadot': { usd: 8.5, usd_24h_change: -0.3, usd_market_cap: 12000000000, usd_24h_vol: 720000000 }
             };
-            updateMarketCards();
+            updateMarketWidgets();
             updateMarketTable();
         }
 
-        // Professional Ticker functionality
-        function initializeTicker() {
-            updateTicker();
-            setInterval(updateTicker, 5000); // Update every 5 seconds for dynamic effect
-        }
+        function updateMarketWidgets() {
+            const marketOverview = document.getElementById('market-overview');
+            if (!marketOverview) return;
 
-        function updateTicker() {
-            const tickerScroll = document.getElementById('ticker-scroll');
-            if (!tickerScroll) return;
-
-            let tickerHTML = '';
-            cryptoList.forEach(crypto => {
+            let widgetsHTML = '';
+            cryptoAssets.slice(0, 6).forEach(crypto => {
                 const data = marketData[crypto.id];
                 if (data) {
                     const changeClass = data.usd_24h_change >= 0 ? 'positive' : 'negative';
                     const changeSymbol = data.usd_24h_change >= 0 ? '+' : '';
 
-                    tickerHTML += `
-                        <div class="ticker-item">
-                            <span class="ticker-symbol">${crypto.symbol}</span>
-                            <span class="ticker-price">$${formatPrice(data.usd)}</span>
-                            <span class="ticker-change ${changeClass}">${changeSymbol}${data.usd_24h_change.toFixed(2)}%</span>
-                        </div>
-                    `;
-                }
-            });
-
-            // Duplicate content for seamless scrolling
-            tickerScroll.innerHTML = tickerHTML + tickerHTML;
-        }
-
-        function updateMarketCards() {
-            const marketGrid = document.getElementById('market-grid');
-            if (!marketGrid) return;
-
-            let cardsHTML = '';
-            cryptoList.slice(0, 6).forEach(crypto => {
-                const data = marketData[crypto.id];
-                if (data) {
-                    const changeClass = data.usd_24h_change >= 0 ? 'positive' : 'negative';
-                    const changeSymbol = data.usd_24h_change >= 0 ? '+' : '';
-
-                    cardsHTML += `
-                        <div class="market-card">
-                            <div class="market-header">
-                                <div class="market-symbol">
-                                    <div class="market-icon">${crypto.symbol.charAt(0)}</div>
-                                    <div>
-                                        <div class="market-name">${crypto.name}</div>
-                                        <div class="market-code">${crypto.symbol}</div>
-                                    </div>
-                                </div>
+                    widgetsHTML += `
+                        <div class="market-widget">
+                            <div class="market-widget-header">
+                                <div class="market-symbol">${crypto.symbol}</div>
                                 <div class="market-change ${changeClass}">
                                     ${changeSymbol}${data.usd_24h_change.toFixed(2)}%
                                 </div>
                             </div>
                             <div class="market-price">$${formatPrice(data.usd)}</div>
-                            <div class="market-stats">
-                                <div class="market-stat">
-                                    <div class="market-stat-label">Market Cap</div>
-                                    <div class="market-stat-value">$${formatLargeNumber(data.usd_market_cap)}</div>
+                            <div class="market-details">
+                                <div class="market-detail">
+                                    <div class="market-detail-label">Market Cap</div>
+                                    <div class="market-detail-value">$${formatLargeNumber(data.usd_market_cap)}</div>
                                 </div>
-                                <div class="market-stat">
-                                    <div class="market-stat-label">24h Volume</div>
-                                    <div class="market-stat-value">$${formatLargeNumber(data.usd_24h_vol)}</div>
+                                <div class="market-detail">
+                                    <div class="market-detail-label">24h Volume</div>
+                                    <div class="market-detail-value">$${formatLargeNumber(data.usd_24h_vol)}</div>
                                 </div>
                             </div>
                         </div>
@@ -1598,7 +1496,7 @@
                 }
             });
 
-            marketGrid.innerHTML = cardsHTML;
+            marketOverview.innerHTML = widgetsHTML;
         }
 
         function updateMarketTable() {
@@ -1606,25 +1504,28 @@
             if (!tableBody) return;
 
             let tableHTML = '';
-            cryptoList.forEach(crypto => {
+            cryptoAssets.forEach(crypto => {
                 const data = marketData[crypto.id];
                 if (data) {
-                    const changeClass = data.usd_24h_change >= 0 ? 'text-bull' : 'text-bear';
+                    const changeClass = data.usd_24h_change >= 0 ? 'positive' : 'negative';
                     const changeSymbol = data.usd_24h_change >= 0 ? '+' : '';
+                    const changeColor = data.usd_24h_change >= 0 ? 'var(--data-positive)' : 'var(--data-negative)';
 
                     tableHTML += `
                         <tr>
                             <td>
-                                <div class="flex items-center gap-3">
-                                    <div class="market-icon">${crypto.symbol.charAt(0)}</div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="width: 24px; height: 24px; background: var(--bloomberg-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--terminal-bg); font-weight: 700;">
+                                        ${crypto.symbol.charAt(0)}
+                                    </div>
                                     <div>
-                                        <div class="font-weight-600">${crypto.name}</div>
-                                        <div class="text-tertiary text-sm">${crypto.symbol}</div>
+                                        <div style="font-weight: 600;">${crypto.name}</div>
+                                        <div style="color: var(--text-tertiary); font-size: 0.8rem;">${crypto.symbol}</div>
                                     </div>
                                 </div>
                             </td>
-                            <td class="font-weight-600">$${formatPrice(data.usd)}</td>
-                            <td class="${changeClass} font-weight-600">${changeSymbol}${data.usd_24h_change.toFixed(2)}%</td>
+                            <td style="font-weight: 600;">$${formatPrice(data.usd)}</td>
+                            <td style="color: ${changeColor}; font-weight: 600;">${changeSymbol}${data.usd_24h_change.toFixed(2)}%</td>
                             <td>$${formatLargeNumber(data.usd_24h_vol)}</td>
                             <td>$${formatLargeNumber(data.usd_market_cap)}</td>
                         </tr>
@@ -1634,8 +1535,7 @@
 
             tableBody.innerHTML = tableHTML;
         }
-
-        // Professional utility functions
+        // Utility functions
         function formatPrice(price) {
             if (price >= 1) {
                 return price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -1657,19 +1557,19 @@
             return num.toString();
         }
 
-        // Professional Scroll Effects
+        // Scroll effects
         function initializeScrollEffects() {
             // Header scroll effect
-            window.addEventListener('scroll', throttle(function() {
+            window.addEventListener('scroll', function() {
                 const scrolled = window.pageYOffset;
-                const header = document.querySelector('.header');
+                const header = document.querySelector('.terminal-header');
 
                 if (scrolled > 50) {
                     header.style.boxShadow = 'var(--shadow-lg)';
                 } else {
                     header.style.boxShadow = 'none';
                 }
-            }, 16));
+            });
 
             // Intersection Observer for animations
             if ('IntersectionObserver' in window) {
@@ -1688,7 +1588,7 @@
                 }, observerOptions);
 
                 // Observe elements for scroll animations
-                document.querySelectorAll('.feature-card, .market-card, .card').forEach(el => {
+                document.querySelectorAll('.feature-card, .market-widget, .terminal-panel').forEach(el => {
                     el.style.opacity = '0';
                     el.style.transform = 'translateY(20px)';
                     el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
@@ -1697,72 +1597,25 @@
             }
         }
 
-        // Professional Performance optimizations
-        function initializePerformanceOptimizations() {
-            // Preload critical resources
-            const preloadLink = document.createElement('link');
-            preloadLink.rel = 'preload';
-            preloadLink.href = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap';
-            preloadLink.as = 'style';
-            document.head.appendChild(preloadLink);
-
-            // Optimize animations for accessibility
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-            if (prefersReducedMotion.matches) {
-                document.documentElement.style.setProperty('--transition-fast', '0s');
-                document.documentElement.style.setProperty('--transition-normal', '0s');
-                document.documentElement.style.setProperty('--transition-slow', '0s');
-            }
-
-            // Initialize mock data immediately for better UX
-            if (Object.keys(marketData).length === 0) {
-                useMockData();
-            }
-        }
-
-        // Professional utility functions
-        function throttle(func, limit) {
-            let inThrottle;
-            return function() {
-                const args = arguments;
-                const context = this;
-                if (!inThrottle) {
-                    func.apply(context, args);
-                    inThrottle = true;
-                    setTimeout(() => inThrottle = false, limit);
-                }
-            }
-        }
-
-        // Professional error handling
+        // Error handling
         window.addEventListener('error', function(e) {
-            console.error('Application error:', e.error);
+            console.error('Terminal error:', e.error);
         });
 
         window.addEventListener('unhandledrejection', function(e) {
             console.error('Unhandled promise rejection:', e.reason);
         });
 
-        // Professional accessibility improvements
+        // Accessibility improvements
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                // Close any open mobile menus
-                const navbarNav = document.getElementById('navbar-nav');
-                if (navbarNav && navbarNav.classList.contains('show')) {
-                    navbarNav.classList.remove('show');
-                    const mobileToggle = document.getElementById('mobile-menu-toggle');
-                    if (mobileToggle) {
-                        const icon = mobileToggle.querySelector('i');
-                        icon.className = 'fas fa-bars';
-                    }
-                }
+                // Close any open menus or modals
+                console.log('Escape key pressed');
             }
         });
 
-        // Professional console branding
-        console.log('%c🏛️ BTDUex Professional Trading Platform', 'color: #f0b90b; font-size: 16px; font-weight: bold;');
-        console.log('%cInstitutional-grade cryptocurrency trading platform', 'color: #848e9c; font-size: 14px;');
-        console.log('%cFeatures: Real-time data, professional UI, responsive design', 'color: #b7bdc6; font-size: 12px;');
+
+
     </script>
 </body>
 </html>
