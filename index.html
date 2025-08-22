@@ -6,83 +6,139 @@
     <title>BTDUEX - Professional Cryptocurrency Trading Terminal</title>
     <meta name="description" content="BTDUEX Professional Trading Terminal - Institutional-grade cryptocurrency spot trading platform with real-time market data and advanced trading tools.">
 
-    <!-- Fonts -->
+    <!-- Swiss Banking Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* Bloomberg Terminal Style Variables */
+        /* Swiss Banking Design System */
         :root {
-            /* Bloomberg Color Palette */
-            --bloomberg-orange: #ff6600;
-            --bloomberg-orange-dark: #e55a00;
-            --bloomberg-orange-light: #ff8533;
+            /* Swiss Banking Primary Colors */
+            --swiss-navy: #1B365D;
+            --swiss-navy-dark: #0F1F35;
+            --swiss-navy-light: #2A4A73;
+            --swiss-navy-alpha: rgba(27, 54, 93, 0.08);
 
-            /* Terminal Colors */
-            --terminal-bg: #1a1a1a;
-            --terminal-surface: #2d2d2d;
-            --terminal-surface-light: #3a3a3a;
-            --terminal-surface-dark: #1f1f1f;
-            --terminal-border: #404040;
-            --terminal-border-light: #555555;
+            /* Swiss Banking Accent Colors */
+            --swiss-gold: #D4AF37;
+            --swiss-gold-dark: #B8941F;
+            --swiss-gold-light: #E6C55A;
+            --swiss-silver: #8B9DC3;
+            --swiss-silver-dark: #6B7FA3;
 
-            /* Text Colors */
-            --text-primary: #ffffff;
-            --text-secondary: #cccccc;
-            --text-tertiary: #999999;
-            --text-muted: #666666;
-            --text-orange: var(--bloomberg-orange);
+            /* Swiss Banking Neutral Colors */
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #FAFBFC;
+            --bg-tertiary: #F5F7FA;
+            --bg-surface: #FFFFFF;
+            --bg-surface-hover: #F8F9FB;
+            --bg-navy: var(--swiss-navy);
+            --bg-navy-light: #F7F8FA;
 
-            /* Data Colors */
-            --data-positive: #00ff88;
-            --data-negative: #ff4444;
-            --data-neutral: #ffaa00;
-            --data-bg-positive: rgba(0, 255, 136, 0.1);
-            --data-bg-negative: rgba(255, 68, 68, 0.1);
+            /* Swiss Banking Text Colors */
+            --text-primary: var(--swiss-navy);
+            --text-secondary: #4A5568;
+            --text-tertiary: #718096;
+            --text-muted: #A0AEC0;
+            --text-inverse: #FFFFFF;
+            --text-gold: var(--swiss-gold);
 
-            /* Typography */
-            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-mono: 'Roboto Mono', 'SF Mono', Monaco, monospace;
+            /* Swiss Banking Border Colors */
+            --border-primary: #E2E8F0;
+            --border-secondary: #CBD5E1;
+            --border-accent: var(--swiss-gold);
+            --border-navy: var(--swiss-navy);
 
-            /* Spacing */
-            --space-xs: 0.25rem;
-            --space-sm: 0.5rem;
-            --space-md: 1rem;
-            --space-lg: 1.5rem;
-            --space-xl: 2rem;
-            --space-2xl: 3rem;
+            /* Swiss Banking Data Colors */
+            --data-positive: #059669;
+            --data-negative: #DC2626;
+            --data-neutral: var(--swiss-gold);
+            --data-positive-bg: rgba(5, 150, 105, 0.05);
+            --data-negative-bg: rgba(220, 38, 38, 0.05);
+
+            /* Swiss Banking Typography */
+            --font-primary: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            --font-secondary: 'Avenir Next', 'Avenir', 'Segoe UI', sans-serif;
+            --font-mono: 'SF Mono', 'Monaco', 'Consolas', monospace;
+
+            /* Font Sizes */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            --text-5xl: 3rem;
+
+            /* Spacing Scale */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
 
             /* Border Radius */
-            --radius-sm: 2px;
-            --radius-md: 4px;
-            --radius-lg: 6px;
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
 
-            /* Shadows */
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
-            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+            /* Swiss Banking Shadows */
+            --shadow-sm: 0 1px 2px rgba(27, 54, 93, 0.04);
+            --shadow-md: 0 2px 4px rgba(27, 54, 93, 0.06);
+            --shadow-lg: 0 4px 8px rgba(27, 54, 93, 0.08);
+            --shadow-xl: 0 8px 16px rgba(27, 54, 93, 0.1);
+            --shadow-gold: 0 2px 8px rgba(212, 175, 55, 0.15);
 
-            /* Transitions */
-            --transition: 0.2s ease-in-out;
+            /* Swiss Banking Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+
+            /* Z-Index Scale */
+            --z-dropdown: 1000;
+            --z-sticky: 1020;
+            --z-fixed: 1030;
+            --z-modal: 1040;
+            --z-popover: 1050;
+            --z-tooltip: 1060;
         }
 
-        /* Light Theme Override */
-        [data-theme="light"] {
-            --terminal-bg: #ffffff;
-            --terminal-surface: #f5f5f5;
-            --terminal-surface-light: #e0e0e0;
-            --terminal-surface-dark: #eeeeee;
-            --terminal-border: #d0d0d0;
-            --terminal-border-light: #c0c0c0;
+        /* Swiss Banking Dark Theme */
+        [data-theme="dark"] {
+            --bg-primary: var(--swiss-navy);
+            --bg-secondary: var(--swiss-navy-dark);
+            --bg-tertiary: #1A2B47;
+            --bg-surface: #243654;
+            --bg-surface-hover: #2A4A73;
 
-            --text-primary: #1a1a1a;
-            --text-secondary: #333333;
-            --text-tertiary: #666666;
-            --text-muted: #999999;
+            --text-primary: #FFFFFF;
+            --text-secondary: #E2E8F0;
+            --text-tertiary: var(--swiss-silver);
+            --text-muted: #8B9DC3;
+            --text-inverse: var(--swiss-navy);
+
+            --border-primary: #2A4A73;
+            --border-secondary: #3A5A83;
+
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.4);
+            --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
 
         /* Reset and Base Styles */
@@ -93,616 +149,363 @@
         }
 
         html {
-            font-size: 14px;
+            font-size: 16px;
             scroll-behavior: smooth;
         }
 
         body {
             font-family: var(--font-primary);
-            background-color: var(--terminal-bg);
+            background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.4;
+            line-height: 1.5;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-weight: 400;
+            letter-spacing: -0.01em;
         }
 
-        /* Terminal Layout System */
-        .terminal-container {
-            max-width: 1920px;
+        /* Container System */
+        .container {
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 var(--space-md);
+            padding: 0 var(--space-6);
         }
 
-        .terminal-grid {
-            display: grid;
-            gap: var(--space-sm);
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--space-4);
+            }
         }
 
-        .terminal-panel {
-            background: var(--terminal-surface);
-            border: 1px solid var(--terminal-border);
-            border-radius: var(--radius-sm);
-            padding: var(--space-md);
-        }
-
-        .terminal-panel-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: var(--space-sm);
-            border-bottom: 1px solid var(--terminal-border);
-            margin-bottom: var(--space-md);
-        }
-
-        .terminal-panel-title {
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-orange);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Header Terminal Style */
-        .terminal-header {
+        /* Swiss Banking Header */
+        .header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: var(--terminal-surface-dark);
-            border-bottom: 2px solid var(--bloomberg-orange);
-            z-index: 1000;
-            height: 60px;
+            background: var(--bg-navy);
+            border-bottom: 1px solid var(--swiss-gold);
+            z-index: var(--z-fixed);
+            height: 72px;
+            box-shadow: var(--shadow-md);
         }
 
-        .terminal-nav {
+        [data-theme="light"] .header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-primary);
+        }
+
+        .nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
             height: 100%;
-            padding: 0 var(--space-lg);
+            padding: 0 var(--space-6);
         }
 
-        .terminal-brand {
+        .brand {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            font-family: var(--font-mono);
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--bloomberg-orange);
+            gap: var(--space-3);
+            font-weight: 300;
+            font-size: var(--text-xl);
+            color: #FFFFFF;
+            text-decoration: none;
+            letter-spacing: 0.02em;
         }
 
-        .terminal-brand-icon {
-            width: 32px;
-            height: 32px;
-            background: var(--bloomberg-orange);
+        [data-theme="light"] .brand {
+            color: var(--text-primary);
+        }
+
+        .brand-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--swiss-gold);
             border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--terminal-bg);
-            font-size: 1rem;
+            color: var(--swiss-navy);
+            font-size: var(--text-base);
+            font-weight: 700;
+            box-shadow: var(--shadow-gold);
         }
 
-        .terminal-nav-links {
+        .nav-links {
             display: flex;
             align-items: center;
-            gap: var(--space-xl);
+            gap: var(--space-8);
         }
 
-        .terminal-nav-link {
-            color: var(--text-secondary);
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            font-weight: 500;
-            padding: var(--space-sm) var(--space-md);
+            font-weight: 400;
+            font-size: var(--text-sm);
+            padding: var(--space-3) var(--space-4);
             border-radius: var(--radius-sm);
-            transition: var(--transition);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            transition: all var(--transition-normal);
+            position: relative;
+            letter-spacing: 0.01em;
         }
 
-        .terminal-nav-link:hover,
-        .terminal-nav-link.active {
-            color: var(--bloomberg-orange);
-            background: rgba(255, 102, 0, 0.1);
+        [data-theme="light"] .nav-link {
+            color: var(--text-secondary);
         }
 
-        .terminal-controls {
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--swiss-gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        [data-theme="light"] .nav-link:hover,
+        [data-theme="light"] .nav-link.active {
+            color: var(--swiss-navy);
+            background: var(--swiss-navy-alpha);
+        }
+
+        .nav-controls {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: var(--space-3);
         }
 
-        .terminal-control-btn {
-            width: 36px;
-            height: 36px;
-            background: var(--terminal-surface);
-            border: 1px solid var(--terminal-border);
+        .control-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: var(--radius-sm);
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.7);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: var(--transition);
+            transition: all var(--transition-normal);
+            font-size: var(--text-sm);
         }
 
-        .terminal-control-btn:hover {
-            background: var(--terminal-surface-light);
-            border-color: var(--bloomberg-orange);
-            color: var(--bloomberg-orange);
+        [data-theme="light"] .control-btn {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-primary);
+            color: var(--text-secondary);
+        }
+
+        .control-btn:hover {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--swiss-gold);
+            color: var(--swiss-gold);
+        }
+
+        [data-theme="light"] .control-btn:hover {
+            background: var(--swiss-navy-alpha);
+            border-color: var(--swiss-navy);
+            color: var(--swiss-navy);
         }
 
         /* Main Content */
-        .terminal-main {
-            margin-top: 60px;
-            min-height: calc(100vh - 60px);
-            padding: var(--space-lg) 0;
+        .main {
+            margin-top: 72px;
+            min-height: calc(100vh - 72px);
         }
 
-        /* Hero Terminal Section */
-        .terminal-hero {
-            padding: var(--space-2xl) 0;
-            background: linear-gradient(135deg, var(--terminal-bg) 0%, var(--terminal-surface-dark) 100%);
-        }
-
-        .hero-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero-title {
-            font-family: var(--font-mono);
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--space-lg);
-            line-height: 1.2;
-        }
-
-        .hero-title .highlight {
-            color: var(--bloomberg-orange);
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-2xl);
-            line-height: 1.5;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-lg);
-            margin-top: var(--space-2xl);
-        }
-
-        .hero-stat {
-            background: var(--terminal-surface);
-            border: 1px solid var(--terminal-border);
-            border-radius: var(--radius-md);
-            padding: var(--space-lg);
-            text-align: center;
-        }
-
-        .hero-stat-value {
-            font-family: var(--font-mono);
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--bloomberg-orange);
-            display: block;
-            margin-bottom: var(--space-sm);
-        }
-
-        .hero-stat-label {
-            font-size: 0.8rem;
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Market Data Terminal */
-        .market-terminal {
-            padding: var(--space-2xl) 0;
-            background: var(--terminal-surface-dark);
-        }
-
-        .market-overview {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-lg);
-            margin-bottom: var(--space-2xl);
-        }
-
-        .market-widget {
-            background: var(--terminal-surface);
-            border: 1px solid var(--terminal-border);
-            border-radius: var(--radius-md);
-            padding: var(--space-lg);
-        }
-
-        .market-widget-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: var(--space-md);
-        }
-
-        .market-symbol {
-            font-family: var(--font-mono);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .market-change {
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-            font-weight: 600;
-            padding: var(--space-xs) var(--space-sm);
-            border-radius: var(--radius-sm);
-        }
-
-        .market-change.positive {
-            color: var(--data-positive);
-            background: var(--data-bg-positive);
-        }
-
-        .market-change.negative {
-            color: var(--data-negative);
-            background: var(--data-bg-negative);
-        }
-
-        .market-price {
-            font-family: var(--font-mono);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--space-md);
-        }
-
-        .market-details {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-md);
-        }
-
-        .market-detail {
-            text-align: center;
-            padding: var(--space-sm);
-            background: var(--terminal-surface-dark);
-            border-radius: var(--radius-sm);
-        }
-
-        .market-detail-label {
-            font-size: 0.7rem;
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            margin-bottom: var(--space-xs);
-        }
-
-        .market-detail-value {
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        /* Data Table Terminal Style */
-        .terminal-table {
-            background: var(--terminal-surface);
-            border: 1px solid var(--terminal-border);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-        }
-
-        .terminal-table-header {
-            background: var(--terminal-surface-dark);
-            padding: var(--space-md);
-            border-bottom: 1px solid var(--terminal-border);
-        }
-
-        .terminal-table-title {
-            font-family: var(--font-mono);
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--bloomberg-orange);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .terminal-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .terminal-table th,
-        .terminal-table td {
-            padding: var(--space-md);
-            text-align: left;
-            border-bottom: 1px solid var(--terminal-border);
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-        }
-
-        .terminal-table th {
-            background: var(--terminal-surface-dark);
-            color: var(--text-tertiary);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 0.8rem;
-        }
-
-        .terminal-table td {
-            color: var(--text-primary);
-        }
-
-        .terminal-table tr:hover {
-            background: var(--terminal-surface-light);
-        }
-
-        .terminal-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        /* Trading Features Section */
-        .trading-features {
-            padding: var(--space-2xl) 0;
-            background: var(--terminal-bg);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-lg);
-        }
-
-        .feature-card {
-            background: var(--terminal-surface);
-            border: 1px solid var(--terminal-border);
-            border-radius: var(--radius-md);
-            padding: var(--space-xl);
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .feature-card:hover {
-            border-color: var(--bloomberg-orange);
-            transform: translateY(-2px);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--bloomberg-orange);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--space-lg);
-            font-size: 1.5rem;
-            color: var(--terminal-bg);
-        }
-
-        .feature-title {
-            font-family: var(--font-mono);
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: var(--space-md);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .feature-description {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        /* Terminal Footer */
-        .terminal-footer {
-            background: var(--terminal-surface-dark);
-            border-top: 2px solid var(--bloomberg-orange);
-            padding: var(--space-2xl) 0 var(--space-lg);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-xl);
-            margin-bottom: var(--space-xl);
-        }
-
-        .footer-section h3 {
-            font-family: var(--font-mono);
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--bloomberg-orange);
-            margin-bottom: var(--space-md);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .footer-section p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: var(--space-md);
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-sm);
-        }
-
-        .footer-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: var(--transition);
-            font-size: 0.9rem;
-        }
-
-        .footer-link:hover {
-            color: var(--bloomberg-orange);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid var(--terminal-border);
-            padding-top: var(--space-lg);
-            text-align: center;
-            color: var(--text-tertiary);
-            font-size: 0.8rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .terminal-nav-links {
-                display: none;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .market-overview {
-                grid-template-columns: 1fr;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .terminal-container {
-                padding: 0 var(--space-sm);
-            }
-
-            .hero-title {
-                font-size: 1.8rem;
-            }
-
-            .hero-stats {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ===== PROFESSIONAL MAIN CONTENT ===== */
-        .main-content {
-            margin-top: 64px;
-            min-height: calc(100vh - 64px);
-        }
-
-        .hero-section {
+        /* Swiss Banking Hero Section */
+        .hero {
+            padding: var(--space-24) 0 var(--space-20);
             background: var(--bg-primary);
-            padding: calc(80px + 50px + var(--space-8)) 0 var(--space-12); /* Header + Ticker + spacing */
+            position: relative;
+            border-bottom: 1px solid var(--border-primary);
+        }
+
+        [data-theme="dark"] .hero {
+            background: var(--bg-navy);
         }
 
         .hero-content {
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
         }
 
         .hero-title {
-            font-size: var(--text-4xl);
-            font-weight: 700;
+            font-family: var(--font-primary);
+            font-size: var(--text-5xl);
+            font-weight: 200;
             color: var(--text-primary);
-            margin-bottom: var(--space-6);
+            margin-bottom: var(--space-8);
             line-height: 1.2;
+            letter-spacing: -0.01em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        [data-theme="dark"] .hero-title {
+            color: #FFFFFF;
+        }
+
+        .hero-title .highlight {
+            color: var(--swiss-gold);
+            font-weight: 300;
         }
 
         .hero-subtitle {
-            font-size: var(--text-xl);
+            font-family: var(--font-secondary);
+            font-size: var(--text-lg);
             color: var(--text-secondary);
-            margin-bottom: var(--space-8);
-            line-height: 1.5;
+            margin-bottom: var(--space-16);
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        [data-theme="dark"] .hero-subtitle {
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .hero-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-6);
-            margin-top: var(--space-12);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            margin-top: var(--space-16);
+            background: var(--border-primary);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
         }
 
         .stat-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-primary);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
+            background: var(--bg-surface);
+            padding: var(--space-8) var(--space-6);
             text-align: center;
+            transition: all var(--transition-normal);
+            position: relative;
         }
 
-        .stat-number {
+        [data-theme="dark"] .stat-card {
+            background: var(--bg-surface);
+        }
+
+        .stat-card:hover {
+            background: var(--bg-surface-hover);
+        }
+
+        [data-theme="dark"] .stat-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-value {
             font-family: var(--font-mono);
-            font-size: var(--text-3xl);
-            font-weight: 700;
-            color: var(--primary-brand);
+            font-size: var(--text-2xl);
+            font-weight: 300;
+            color: var(--swiss-gold);
             display: block;
             margin-bottom: var(--space-2);
+            letter-spacing: -0.01em;
         }
 
         .stat-label {
-            font-size: var(--text-sm);
-            color: var(--text-secondary);
+            font-family: var(--font-secondary);
+            font-size: var(--text-xs);
+            color: var(--text-tertiary);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.08em;
+            font-weight: 500;
         }
 
-        /* Market Overview Section */
+        [data-theme="dark"] .stat-label {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Swiss Banking Market Section */
         .market-section {
-            padding: var(--space-16) 0;
+            padding: var(--space-20) 0;
             background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-primary);
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: var(--space-12);
+            margin-bottom: var(--space-16);
         }
 
         .section-title {
+            font-family: var(--font-primary);
             font-size: var(--text-3xl);
-            font-weight: 700;
+            font-weight: 300;
             color: var(--text-primary);
             margin-bottom: var(--space-4);
+            letter-spacing: -0.01em;
         }
 
         .section-subtitle {
-            font-size: var(--text-lg);
+            font-family: var(--font-secondary);
+            font-size: var(--text-base);
             color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto;
+            font-weight: 400;
         }
 
-        .market-grid {
+        .panel {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-sm);
+            padding: var(--space-10);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: var(--space-6);
+            border-bottom: 1px solid var(--border-primary);
+            margin-bottom: var(--space-10);
+        }
+
+        .panel-title {
+            font-family: var(--font-primary);
+            font-size: var(--text-lg);
+            font-weight: 400;
+            color: var(--swiss-navy);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            letter-spacing: -0.01em;
+        }
+
+        [data-theme="dark"] .panel-title {
+            color: var(--text-inverse);
+        }
+
+        .market-overview {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-6);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1px;
+            margin-bottom: var(--space-12);
+            background: var(--border-primary);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
         }
 
         .market-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-primary);
-            border-radius: var(--radius-lg);
+            background: var(--bg-surface);
             padding: var(--space-6);
             transition: all var(--transition-normal);
+            position: relative;
         }
 
         .market-card:hover {
-            border-color: var(--border-secondary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+            background: var(--bg-surface-hover);
         }
 
         .market-header {
@@ -721,137 +524,240 @@
         .market-icon {
             width: 32px;
             height: 32px;
-            background: var(--primary-brand);
-            border-radius: 50%;
+            background: var(--swiss-gold);
+            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            color: var(--bg-primary);
-            font-size: var(--text-sm);
+            color: var(--swiss-navy);
+            font-size: var(--text-xs);
+            font-family: var(--font-mono);
         }
 
         .market-name {
-            font-weight: 600;
+            font-family: var(--font-secondary);
+            font-weight: 500;
             color: var(--text-primary);
+            font-size: var(--text-sm);
         }
 
         .market-code {
-            font-size: var(--text-sm);
+            font-size: var(--text-xs);
             color: var(--text-tertiary);
             font-family: var(--font-mono);
+            font-weight: 400;
         }
 
         .market-change {
             font-family: var(--font-mono);
-            font-weight: 600;
+            font-weight: 400;
             padding: var(--space-1) var(--space-2);
             border-radius: var(--radius-sm);
-            font-size: var(--text-sm);
+            font-size: var(--text-xs);
+            border: 1px solid transparent;
+        }
+
+        .market-change.positive {
+            color: var(--data-positive);
+            background: var(--data-positive-bg);
+            border-color: rgba(5, 150, 105, 0.2);
+        }
+
+        .market-change.negative {
+            color: var(--data-negative);
+            background: var(--data-negative-bg);
+            border-color: rgba(220, 38, 38, 0.2);
         }
 
         .market-price {
             font-family: var(--font-mono);
-            font-size: var(--text-2xl);
-            font-weight: 700;
+            font-size: var(--text-xl);
+            font-weight: 300;
             color: var(--text-primary);
             margin-bottom: var(--space-4);
+            letter-spacing: -0.01em;
         }
 
         .market-stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--space-4);
+            gap: 1px;
+            background: var(--border-primary);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
         }
 
         .market-stat {
             text-align: center;
             padding: var(--space-3);
-            background: var(--bg-secondary);
-            border-radius: var(--radius-md);
+            background: var(--bg-tertiary);
         }
 
         .market-stat-label {
+            font-family: var(--font-secondary);
             font-size: var(--text-xs);
             color: var(--text-tertiary);
             margin-bottom: var(--space-1);
             text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 0.05em;
         }
 
         .market-stat-value {
             font-family: var(--font-mono);
-            font-weight: 600;
+            font-weight: 400;
             color: var(--text-primary);
-            font-size: var(--text-sm);
+            font-size: var(--text-xs);
         }
 
-        /* Features Section */
+        /* Swiss Banking Data Table */
+        .data-table {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: var(--space-4) var(--space-6);
+            text-align: left;
+            border-bottom: 1px solid var(--border-primary);
+        }
+
+        .data-table th {
+            background: var(--bg-tertiary);
+            color: var(--text-tertiary);
+            font-family: var(--font-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: var(--text-xs);
+        }
+
+        .data-table td {
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            font-size: var(--text-sm);
+            font-weight: 400;
+        }
+
+        .data-table tr:hover {
+            background: var(--bg-surface-hover);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Swiss Banking Features Section */
         .features-section {
-            padding: var(--space-16) 0;
+            padding: var(--space-20) 0;
             background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-primary);
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-8);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: var(--border-primary);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
         }
 
         .feature-card {
+            background: var(--bg-surface);
+            padding: var(--space-10);
             text-align: center;
-            padding: var(--space-8);
+            transition: all var(--transition-normal);
+            position: relative;
+        }
+
+        .feature-card:hover {
+            background: var(--bg-surface-hover);
         }
 
         .feature-icon {
-            width: 64px;
-            height: 64px;
-            background: var(--primary-brand);
-            border-radius: var(--radius-xl);
+            width: 48px;
+            height: 48px;
+            background: var(--swiss-gold);
+            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto var(--space-6);
-            font-size: var(--text-2xl);
-            color: var(--bg-primary);
+            font-size: var(--text-lg);
+            color: var(--swiss-navy);
+            box-shadow: var(--shadow-gold);
         }
 
         .feature-title {
-            font-size: var(--text-xl);
-            font-weight: 600;
+            font-family: var(--font-primary);
+            font-size: var(--text-lg);
+            font-weight: 400;
             color: var(--text-primary);
             margin-bottom: var(--space-4);
+            letter-spacing: -0.01em;
         }
 
         .feature-description {
+            font-family: var(--font-secondary);
             color: var(--text-secondary);
             line-height: 1.6;
+            font-size: var(--text-sm);
+            font-weight: 400;
         }
 
-        /* ===== PROFESSIONAL FOOTER ===== */
+        /* Swiss Banking Footer */
         .footer {
-            background: var(--bg-secondary);
+            background: var(--bg-navy);
+            border-top: 1px solid var(--swiss-gold);
+            padding: var(--space-16) 0 var(--space-8);
+        }
+
+        [data-theme="light"] .footer {
+            background: var(--bg-tertiary);
             border-top: 1px solid var(--border-primary);
-            padding: var(--space-12) 0 var(--space-6);
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-8);
-            margin-bottom: var(--space-8);
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-10);
+            margin-bottom: var(--space-10);
         }
 
         .footer-section h3 {
-            font-size: var(--text-lg);
-            font-weight: 600;
-            color: var(--text-primary);
+            font-family: var(--font-primary);
+            font-size: var(--text-base);
+            font-weight: 400;
+            color: var(--text-inverse);
             margin-bottom: var(--space-4);
+            letter-spacing: -0.01em;
+        }
+
+        [data-theme="light"] .footer-section h3 {
+            color: var(--text-primary);
         }
 
         .footer-section p {
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.8);
             line-height: 1.6;
             margin-bottom: var(--space-4);
+            font-size: var(--text-sm);
+            font-family: var(--font-secondary);
+        }
+
+        [data-theme="light"] .footer-section p {
+            color: var(--text-secondary);
         }
 
         .footer-links {
@@ -861,144 +767,167 @@
         }
 
         .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color var(--transition-normal);
+            font-size: var(--text-sm);
+            padding: var(--space-1) 0;
+            font-family: var(--font-secondary);
+        }
+
+        [data-theme="light"] .footer-link {
             color: var(--text-secondary);
-            transition: color var(--transition-fast);
         }
 
         .footer-link:hover {
-            color: var(--primary-brand);
+            color: var(--swiss-gold);
+        }
+
+        [data-theme="light"] .footer-link:hover {
+            color: var(--swiss-navy);
         }
 
         .footer-bottom {
-            border-top: 1px solid var(--border-primary);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
             padding-top: var(--space-6);
             text-align: center;
-            color: var(--text-tertiary);
-            font-size: var(--text-sm);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: var(--text-xs);
+            font-family: var(--font-secondary);
         }
 
+        [data-theme="light"] .footer-bottom {
+            border-top: 1px solid var(--border-primary);
+            color: var(--text-tertiary);
+        }
 
-
-        /* ===== RESPONSIVE DESIGN ===== */
+        /* Swiss Banking Responsive Design */
         @media (max-width: 1024px) {
-            .sidebar {
-                width: 40vw;
-            }
-
-            .main-content {
-                width: 60vw;
-                margin-left: 40vw;
+            .nav-links {
+                gap: var(--space-4);
             }
 
             .hero-title {
                 font-size: var(--text-4xl);
             }
-        }
 
-        @media (max-width: 768px) {
-            .app-container {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                width: 100vw;
-                height: auto;
-                position: relative;
-                border-right: none;
-                border-bottom: 1px solid var(--border-primary);
-            }
-
-            .sidebar-market {
-                display: none;
-            }
-
-            .main-content {
-                width: 100vw;
-                margin-left: 0;
-            }
-
-            .hero-title {
-                font-size: var(--text-3xl);
-            }
-
-            .feature-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
             }
         }
 
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: var(--space-16) 0 var(--space-12);
+            }
+
+            .hero-title {
+                font-size: var(--text-3xl);
+                font-weight: 300;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .market-overview {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-8);
+            }
+        }
+
         @media (max-width: 480px) {
-            .content-section {
-                padding: var(--space-8) var(--space-4);
+            .container {
+                padding: 0 var(--space-4);
             }
 
             .hero-title {
                 font-size: var(--text-2xl);
+                font-weight: 300;
             }
 
             .hero-subtitle {
                 font-size: var(--text-base);
             }
 
-            .sidebar-brand {
-                padding: var(--space-4);
+            .hero-stats {
+                grid-template-columns: 1fr;
             }
 
-            .sidebar-nav {
-                padding: var(--space-4);
+            .stat-card {
+                padding: var(--space-6) var(--space-4);
             }
 
-            .sidebar-controls {
-                padding: var(--space-4);
+            .panel {
+                padding: var(--space-6);
+            }
+
+            .feature-card {
+                padding: var(--space-8) var(--space-6);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
             }
         }
-        .mb-6 { margin-bottom: var(--space-6); }
-        .mb-8 { margin-bottom: var(--space-8); }
-
-        .mt-2 { margin-top: var(--space-2); }
-        .mt-4 { margin-top: var(--space-4); }
-        .mt-6 { margin-top: var(--space-6); }
-        .mt-8 { margin-top: var(--space-8); }
 
     </style>
 </head>
 <body>
-    <!-- Terminal Header -->
-    <header class="terminal-header">
-        <nav class="terminal-nav">
-            <div class="terminal-brand">
-                <div class="terminal-brand-icon">
-                    <i class="fas fa-chart-bar"></i>
+    <!-- Modern Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                    <a href="#home" class="brand">
+                        <div class="brand-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <span>BTDUEX</span>
+                    </a>
+
+                    <div class="nav-links">
+                        <a href="#home" class="nav-link active">Terminal</a>
+                        <a href="#markets" class="nav-link">Markets</a>
+                        <a href="#trading" class="nav-link">Spot Trading</a>
+                        <a href="#about" class="nav-link">Platform</a>
+                    </div>
+
+                    <div class="nav-controls">
+                        <button class="control-btn" id="theme-toggle" title="Theme">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                        <button class="control-btn" id="lang-toggle" title="Language">
+                            <i class="fas fa-globe"></i>
+                        </button>
+                    </div>
                 </div>
-                <span>BTDUEX</span>
-            </div>
-
-            <div class="terminal-nav-links">
-                <a href="#home" class="terminal-nav-link active">Terminal</a>
-                <a href="#markets" class="terminal-nav-link">Markets</a>
-                <a href="#trading" class="terminal-nav-link">Spot Trading</a>
-                <a href="#about" class="terminal-nav-link">Platform</a>
-            </div>
-
-            <div class="terminal-controls">
-                <button class="terminal-control-btn" id="theme-toggle" title="Theme">
-                    <i class="fas fa-sun"></i>
-                </button>
-                <button class="terminal-control-btn" id="lang-toggle" title="Language">
-                    <i class="fas fa-globe"></i>
-                </button>
             </div>
         </nav>
     </header>
 
-    <!-- Main Terminal Content -->
-    <main class="terminal-main">
-        <!-- Hero Terminal Section -->
-        <section class="terminal-hero" id="home">
-            <div class="terminal-container">
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Modern Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">
-                        Professional <span class="highlight">Trading Terminal</span><br>
-                        For Digital Assets
+                        <div>Professional <span class="highlight">Trading Terminal</span></div>
+                        <div>For Digital Assets</div>
                     </h1>
                     <p class="hero-subtitle">
                         BTDUEX delivers institutional-grade cryptocurrency spot trading with real-time market data,
@@ -1006,46 +935,44 @@
                     </p>
 
                     <div class="hero-stats">
-                        <div class="hero-stat">
-                            <span class="hero-stat-value">$2.8B</span>
-                            <span class="hero-stat-label">Daily Volume</span>
+                        <div class="stat-card">
+                            <span class="stat-value">$2.8B</span>
+                            <span class="stat-label">Daily Volume</span>
                         </div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-value">750K+</span>
-                            <span class="hero-stat-label">Active Traders</span>
+                        <div class="stat-card">
+                            <span class="stat-value">750K+</span>
+                            <span class="stat-label">Active Traders</span>
                         </div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-value">150+</span>
-                            <span class="hero-stat-label">Trading Pairs</span>
+                        <div class="stat-card">
+                            <span class="stat-value">150+</span>
+                            <span class="stat-label">Trading Pairs</span>
                         </div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-value">99.98%</span>
-                            <span class="hero-stat-label">Uptime</span>
+                        <div class="stat-card">
+                            <span class="stat-value">99.98%</span>
+                            <span class="stat-label">Uptime</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Market Data Terminal -->
-        <section class="market-terminal" id="markets">
-            <div class="terminal-container">
-                <div class="terminal-panel">
-                    <div class="terminal-panel-header">
-                        <h2 class="terminal-panel-title" data-key="real-time-market-data">Real-Time Market Data</h2>
-                        <div style="color: var(--text-tertiary); font-size: 0.8rem;">
-                            <i class="fas fa-circle" style="color: var(--data-positive); margin-right: 0.5rem;"></i>
-                            <span data-key="live-feed-active">Live Feed Active</span>
-                        </div>
-                    </div>
 
+        <!-- Modern Market Section -->
+        <section class="market-section" id="markets">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-key="real-time-market-data">Real-Time Market Data</h2>
+                    <p class="section-subtitle">
+                        <i class="fas fa-circle" style="color: var(--data-positive); margin-right: 0.5rem;"></i>
+                        <span data-key="live-feed-active">Live Feed Active</span>
+                    </p>
+                </div>
+
+                <div class="panel">
                     <div class="market-overview" id="market-overview">
                         <!-- Market widgets will be populated by JavaScript -->
                     </div>
 
-                    <div class="terminal-table">
-                        <div class="terminal-table-header">
-                            <h3 class="terminal-table-title" data-key="market-overview">Market Overview</h3>
-                        </div>
+                    <div class="data-table">
                         <table>
                             <thead>
                                 <tr>
@@ -1065,67 +992,65 @@
             </div>
         </section>
 
-        <!-- Trading Features Section -->
-        <section class="trading-features" id="trading">
-            <div class="terminal-container">
-                <div class="terminal-panel">
-                    <div class="terminal-panel-header">
-                        <h2 class="terminal-panel-title" data-key="professional-trading-features">Professional Trading Features</h2>
+        <!-- Features Section -->
+        <section class="features-section" id="trading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-key="professional-trading-features">Professional Trading Features</h2>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title" data-key="institutional-security">Institutional Security</h3>
+                        <p class="feature-description" data-key="institutional-security-desc">
+                            Bank-grade security infrastructure with cold storage, multi-signature wallets,
+                            and advanced encryption protecting your digital assets.
+                        </p>
                     </div>
 
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h3 class="feature-title" data-key="institutional-security">Institutional Security</h3>
-                            <p class="feature-description" data-key="institutional-security-desc">
-                                Bank-grade security infrastructure with cold storage, multi-signature wallets,
-                                and advanced encryption protecting your digital assets.
-                            </p>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
+                        <h3 class="feature-title" data-key="advanced-analytics">Advanced Analytics</h3>
+                        <p class="feature-description" data-key="advanced-analytics-desc">
+                            Professional trading tools with real-time charts, technical indicators,
+                            and market depth analysis for informed decision making.
+                        </p>
+                    </div>
 
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h3 class="feature-title" data-key="advanced-analytics">Advanced Analytics</h3>
-                            <p class="feature-description" data-key="advanced-analytics-desc">
-                                Professional trading tools with real-time charts, technical indicators,
-                                and market depth analysis for informed decision making.
-                            </p>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
                         </div>
+                        <h3 class="feature-title" data-key="ultra-fast-execution">Ultra-Fast Execution</h3>
+                        <p class="feature-description" data-key="ultra-fast-execution-desc">
+                            High-performance matching engine with sub-millisecond latency
+                            ensuring optimal order execution and minimal slippage.
+                        </p>
+                    </div>
 
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <h3 class="feature-title" data-key="ultra-fast-execution">Ultra-Fast Execution</h3>
-                            <p class="feature-description" data-key="ultra-fast-execution-desc">
-                                High-performance matching engine with sub-millisecond latency
-                                ensuring optimal order execution and minimal slippage.
-                            </p>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
                         </div>
-
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <h3 class="feature-title" data-key="24-7-support">24/7 Support</h3>
-                            <p class="feature-description" data-key="24-7-support-desc">
-                                Round-the-clock professional support team with deep market expertise
-                                ready to assist with your trading needs.
-                            </p>
-                        </div>
+                        <h3 class="feature-title" data-key="24-7-support">24/7 Support</h3>
+                        <p class="feature-description" data-key="24-7-support-desc">
+                            Round-the-clock professional support team with deep market expertise
+                            ready to assist with your trading needs.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Terminal Footer -->
-    <footer class="terminal-footer" id="about">
-        <div class="terminal-container">
+    <!-- Modern Footer -->
+    <footer class="footer" id="about">
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>BTDUEX</h3>
@@ -1167,17 +1092,15 @@
             </div>
 
             <div class="footer-bottom">
-                <p data-key="copyright">&copy; 2025 BTDUEX PTY LTD. All Rights Reserved.</p>
+                <p data-key="copyright">&copy; 2025 SAILRICH UAB. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-
-
     <script>
-        // Bloomberg Terminal Style JavaScript
+        // Modern FinTech JavaScript
 
-        // Translations
+        // Translations with updated copyright
         const translations = {
             'zh-TW': {
                 'terminal': '終端',
@@ -1221,7 +1144,7 @@
                 'careers': '職業',
                 'legal': '法律',
                 'privacy-policy': '隱私政策',
-                'copyright': '© 2025 BTDUEX PTY LTD. 版權所有。'
+                'copyright': '© 2025 SAILRICH UAB. 版權所有。'
             },
             'en': {
                 'terminal': 'Terminal',
@@ -1265,7 +1188,7 @@
                 'careers': 'Careers',
                 'legal': 'Legal',
                 'privacy-policy': 'Privacy Policy',
-                'copyright': '© 2025 BTDUEX PTY LTD. All Rights Reserved.'
+                'copyright': '© 2025 SAILRICH UAB. All Rights Reserved.'
             }
         };
 
@@ -1276,7 +1199,7 @@
         let lastUpdateTime = 0;
         const UPDATE_INTERVAL = 30000; // 30 seconds
 
-        // Cryptocurrency list for terminal
+        // Cryptocurrency list
         const cryptoAssets = [
             { id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin' },
             { id: 'ethereum', symbol: 'ETH', name: 'Ethereum' },
@@ -1290,9 +1213,9 @@
             { id: 'polkadot', symbol: 'DOT', name: 'Polkadot' }
         ];
 
-        // Initialize terminal
+        // Initialize application
         document.addEventListener('DOMContentLoaded', function() {
-            initializeTerminal();
+            initializeApp();
             initializeTheme();
             initializeLanguage();
             initializeNavigation();
@@ -1300,19 +1223,16 @@
             initializeScrollEffects();
         });
 
-        // Terminal initialization
-        function initializeTerminal() {
-            // Set default theme to dark
+        // App initialization
+        function initializeApp() {
             document.documentElement.setAttribute('data-theme', currentTheme);
 
-            // Initialize mock data immediately for better UX
             if (Object.keys(marketData).length === 0) {
                 useMockData();
             }
 
-            // Terminal branding
-            console.log('%c📊 BTDUEX Professional Trading Terminal', 'color: #ff6600; font-size: 16px; font-weight: bold;');
-            console.log('%cInstitutional-grade cryptocurrency trading platform', 'color: #cccccc; font-size: 14px;');
+            console.log('%c🚀 BTDUEX Professional Trading Terminal', 'color: #00D4FF; font-size: 16px; font-weight: bold;');
+            console.log('%cModern FinTech Platform by SAILRICH UAB', 'color: #B8BCC8; font-size: 14px;');
         }
 
         // Theme functionality
@@ -1354,21 +1274,22 @@
                 }
             });
 
-            // Update specific elements that don't use data-key
+            // Update hero title
             const heroTitle = document.querySelector('.hero-title');
             if (heroTitle) {
                 heroTitle.innerHTML = lang === 'zh-TW' ?
-                    '專業 <span class="highlight">交易終端</span><br>數位資產' :
-                    'Professional <span class="highlight">Trading Terminal</span><br>For Digital Assets';
+                    '<div>專業 <span class="highlight">交易終端</span></div><div>數位資產</div>' :
+                    '<div>Professional <span class="highlight">Trading Terminal</span></div><div>For Digital Assets</div>';
             }
 
+            // Update hero subtitle
             const heroSubtitle = document.querySelector('.hero-subtitle');
             if (heroSubtitle) {
                 heroSubtitle.textContent = translations[lang]['hero-description'];
             }
 
             // Update navigation links
-            const navLinks = document.querySelectorAll('.terminal-nav-link');
+            const navLinks = document.querySelectorAll('.nav-link');
             const navTexts = ['terminal', 'markets', 'spot-trading', 'platform'];
             navLinks.forEach((link, index) => {
                 if (translations[lang][navTexts[index]]) {
@@ -1377,7 +1298,7 @@
             });
 
             // Update stats labels
-            const statLabels = document.querySelectorAll('.hero-stat-label');
+            const statLabels = document.querySelectorAll('.stat-label');
             const statKeys = ['daily-volume', 'active-traders', 'trading-pairs', 'uptime'];
             statLabels.forEach((label, index) => {
                 if (translations[lang][statKeys[index]]) {
@@ -1390,7 +1311,7 @@
 
         // Navigation functionality
         function initializeNavigation() {
-            const navLinks = document.querySelectorAll('.terminal-nav-link');
+            const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1409,6 +1330,7 @@
                 });
             });
         }
+
         // Market data functionality
         function initializeMarketData() {
             fetchMarketData();
@@ -1447,92 +1369,99 @@
                 'ethereum': { usd: 4200, usd_24h_change: 1.8, usd_market_cap: 505000000000, usd_24h_vol: 25000000000 },
                 'binancecoin': { usd: 680, usd_24h_change: -0.5, usd_market_cap: 98000000000, usd_24h_vol: 3200000000 },
                 'ripple': { usd: 1.25, usd_24h_change: 3.2, usd_market_cap: 70000000000, usd_24h_vol: 2800000000 },
-                'cardano': { usd: 0.85, usd_24h_change: -1.2, usd_market_cap: 30000000000, usd_24h_vol: 1200000000 },
-                'solana': { usd: 180, usd_24h_change: 4.1, usd_market_cap: 85000000000, usd_24h_vol: 4500000000 },
-                'dogecoin': { usd: 0.32, usd_24h_change: -2.1, usd_market_cap: 45000000000, usd_24h_vol: 1800000000 },
-                'polygon': { usd: 1.15, usd_24h_change: 0.8, usd_market_cap: 11000000000, usd_24h_vol: 850000000 },
-                'avalanche-2': { usd: 42, usd_24h_change: 1.5, usd_market_cap: 16000000000, usd_24h_vol: 950000000 },
-                'polkadot': { usd: 8.5, usd_24h_change: -0.3, usd_market_cap: 12000000000, usd_24h_vol: 720000000 }
+                'cardano': { usd: 0.85, usd_24h_change: -1.2, usd_market_cap: 30000000000, usd_24h_vol: 1500000000 },
+                'solana': { usd: 180, usd_24h_change: 4.1, usd_market_cap: 85000000000, usd_24h_vol: 4200000000 },
+                'dogecoin': { usd: 0.12, usd_24h_change: 0.8, usd_market_cap: 17000000000, usd_24h_vol: 800000000 },
+                'polygon': { usd: 1.45, usd_24h_change: 2.3, usd_market_cap: 14000000000, usd_24h_vol: 650000000 },
+                'avalanche-2': { usd: 65, usd_24h_change: -0.9, usd_market_cap: 25000000000, usd_24h_vol: 1200000000 },
+                'polkadot': { usd: 8.5, usd_24h_change: 1.5, usd_market_cap: 12000000000, usd_24h_vol: 450000000 }
             };
+
             updateMarketWidgets();
             updateMarketTable();
         }
 
         function updateMarketWidgets() {
-            const marketOverview = document.getElementById('market-overview');
-            if (!marketOverview) return;
+            const container = document.getElementById('market-overview');
+            if (!container) return;
 
-            let widgetsHTML = '';
-            cryptoAssets.slice(0, 6).forEach(crypto => {
+            container.innerHTML = '';
+
+            cryptoAssets.slice(0, 4).forEach(crypto => {
                 const data = marketData[crypto.id];
-                if (data) {
-                    const changeClass = data.usd_24h_change >= 0 ? 'positive' : 'negative';
-                    const changeSymbol = data.usd_24h_change >= 0 ? '+' : '';
+                if (!data) return;
 
-                    widgetsHTML += `
-                        <div class="market-widget">
-                            <div class="market-widget-header">
-                                <div class="market-symbol">${crypto.symbol}</div>
-                                <div class="market-change ${changeClass}">
-                                    ${changeSymbol}${data.usd_24h_change.toFixed(2)}%
-                                </div>
-                            </div>
-                            <div class="market-price">$${formatPrice(data.usd)}</div>
-                            <div class="market-details">
-                                <div class="market-detail">
-                                    <div class="market-detail-label">Market Cap</div>
-                                    <div class="market-detail-value">$${formatLargeNumber(data.usd_market_cap)}</div>
-                                </div>
-                                <div class="market-detail">
-                                    <div class="market-detail-label">24h Volume</div>
-                                    <div class="market-detail-value">$${formatLargeNumber(data.usd_24h_vol)}</div>
-                                </div>
+                const widget = document.createElement('div');
+                widget.className = 'market-card';
+
+                const changeClass = data.usd_24h_change >= 0 ? 'positive' : 'negative';
+                const changeSign = data.usd_24h_change >= 0 ? '+' : '';
+
+                widget.innerHTML = `
+                    <div class="market-header">
+                        <div class="market-symbol">
+                            <div class="market-icon">${crypto.symbol.charAt(0)}</div>
+                            <div>
+                                <div class="market-name">${crypto.name}</div>
+                                <div class="market-code">${crypto.symbol}</div>
                             </div>
                         </div>
-                    `;
-                }
-            });
+                        <div class="market-change ${changeClass}">
+                            ${changeSign}${data.usd_24h_change.toFixed(2)}%
+                        </div>
+                    </div>
+                    <div class="market-price">$${formatPrice(data.usd)}</div>
+                    <div class="market-stats">
+                        <div class="market-stat">
+                            <div class="market-stat-label">24h Vol</div>
+                            <div class="market-stat-value">$${formatLargeNumber(data.usd_24h_vol)}</div>
+                        </div>
+                        <div class="market-stat">
+                            <div class="market-stat-label">Market Cap</div>
+                            <div class="market-stat-value">$${formatLargeNumber(data.usd_market_cap)}</div>
+                        </div>
+                    </div>
+                `;
 
-            marketOverview.innerHTML = widgetsHTML;
+                container.appendChild(widget);
+            });
         }
 
         function updateMarketTable() {
-            const tableBody = document.getElementById('market-table-body');
-            if (!tableBody) return;
+            const tbody = document.getElementById('market-table-body');
+            if (!tbody) return;
 
-            let tableHTML = '';
+            tbody.innerHTML = '';
+
             cryptoAssets.forEach(crypto => {
                 const data = marketData[crypto.id];
-                if (data) {
-                    const changeClass = data.usd_24h_change >= 0 ? 'positive' : 'negative';
-                    const changeSymbol = data.usd_24h_change >= 0 ? '+' : '';
-                    const changeColor = data.usd_24h_change >= 0 ? 'var(--data-positive)' : 'var(--data-negative)';
+                if (!data) return;
 
-                    tableHTML += `
-                        <tr>
-                            <td>
-                                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                    <div style="width: 24px; height: 24px; background: var(--bloomberg-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--terminal-bg); font-weight: 700;">
-                                        ${crypto.symbol.charAt(0)}
-                                    </div>
-                                    <div>
-                                        <div style="font-weight: 600;">${crypto.name}</div>
-                                        <div style="color: var(--text-tertiary); font-size: 0.8rem;">${crypto.symbol}</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td style="font-weight: 600;">$${formatPrice(data.usd)}</td>
-                            <td style="color: ${changeColor}; font-weight: 600;">${changeSymbol}${data.usd_24h_change.toFixed(2)}%</td>
-                            <td>$${formatLargeNumber(data.usd_24h_vol)}</td>
-                            <td>$${formatLargeNumber(data.usd_market_cap)}</td>
-                        </tr>
-                    `;
-                }
+                const row = document.createElement('tr');
+                const changeClass = data.usd_24h_change >= 0 ? 'positive' : 'negative';
+                const changeSign = data.usd_24h_change >= 0 ? '+' : '';
+
+                row.innerHTML = `
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <strong>${crypto.symbol}</strong>
+                            <span style="color: var(--text-tertiary);">${crypto.name}</span>
+                        </div>
+                    </td>
+                    <td>$${formatPrice(data.usd)}</td>
+                    <td>
+                        <span class="market-change ${changeClass}">
+                            ${changeSign}${data.usd_24h_change.toFixed(2)}%
+                        </span>
+                    </td>
+                    <td>$${formatLargeNumber(data.usd_24h_vol)}</td>
+                    <td>$${formatLargeNumber(data.usd_market_cap)}</td>
+                `;
+
+                tbody.appendChild(row);
             });
-
-            tableBody.innerHTML = tableHTML;
         }
-        // Utility functions
+
         function formatPrice(price) {
             if (price >= 1) {
                 return price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -1556,10 +1485,9 @@
 
         // Scroll effects
         function initializeScrollEffects() {
-            // Header scroll effect
             window.addEventListener('scroll', function() {
                 const scrolled = window.pageYOffset;
-                const header = document.querySelector('.terminal-header');
+                const header = document.querySelector('.header');
 
                 if (scrolled > 50) {
                     header.style.boxShadow = 'var(--shadow-lg)';
@@ -1584,8 +1512,7 @@
                     });
                 }, observerOptions);
 
-                // Observe elements for scroll animations
-                document.querySelectorAll('.feature-card, .market-widget, .terminal-panel').forEach(el => {
+                document.querySelectorAll('.feature-card, .market-card, .stat-card').forEach(el => {
                     el.style.opacity = '0';
                     el.style.transform = 'translateY(20px)';
                     el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
@@ -1596,7 +1523,7 @@
 
         // Error handling
         window.addEventListener('error', function(e) {
-            console.error('Terminal error:', e.error);
+            console.error('Application error:', e.error);
         });
 
         window.addEventListener('unhandledrejection', function(e) {
@@ -1606,12 +1533,9 @@
         // Accessibility improvements
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                // Close any open menus or modals
                 console.log('Escape key pressed');
             }
         });
-
-
 
     </script>
 </body>
